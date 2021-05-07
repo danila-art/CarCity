@@ -1,0 +1,85 @@
+@font-face {
+    font-family: "Hemicube_Type";
+    src: url('../font/hemicube-bold/HemicubeType_PERSONAL_USE_ONLY.ttf');
+}
+
+@font-face {
+    font-family: "Head_Human_Title";
+    src: url('../font/head-human/headhumantitle.ttf');
+}
+
+@font-face {
+    font-family: "Rafale";
+    src: url('../font/RafaleU.otf');
+}
+
+h1 {
+    font-family: Hemicube_Type, serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h2 {
+    font-family: Head_Human_Title, serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
+h3 {
+    font-family: Rafale, serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* font media */
+
+@media screen and (max-width: 1366px) {
+    h1 {
+        line-height: 35px;
+    }
+    h2 {
+        line-height: 35px;
+    }
+    h3 {
+        line-height: 35px;
+    }
+    .header h1 {
+        font-size: 26px;
+    }
+    .header__h2 h2 {
+        font-size: 38px;
+    }
+    .header__content-text-h3 h3 {
+        font-size: 22px;
+    }
+    .header__content-button h3 {
+        font-size: 24px;
+    }
+    .advantages__heading-mixed h2, .advantages__heading-mixed h1 {
+        font-size: 32px;
+    }
+    .new-model__heading h3, .new-model__heading h2 {
+        font-size: 32px;
+    }
+    .popular-cars__heading {
+        font-size: 32px;
+    }
+    .popular-cars__content-h2 h2 {
+        font-size: 36px;
+    }
+    .popular-cars__content-h3 h3 {
+        font-size: 22px;
+    }
+    .popular-cars__content-h3-right {
+        font-size: 22px;
+    }
+    .about__heading {
+        font-size: 32px;
+    }
+    .about__content-h3 {
+        font-size: 22px;
+    }
+}

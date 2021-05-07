@@ -1,6 +1,757 @@
-body{
+body {
     margin: 0;
     padding: 0;
     outline: none;
     border: none;
+}
+
+/* test section-hr-section */
+
+.animate-section {
+    display: block;
+    background-color: black;
+    width: 100%;
+    height: 2px;
+    overflow-x: hidden;
+}
+
+.animate-section__line {
+    display: block;
+    background-color: #91EBFE;
+    width: 10%;
+    height: 2px;
+    margin: 0 auto;
+    animation: animate_hr 10s ease-in-out infinite;
+}
+
+/* @keyframes  animate_hr{
+    0%{
+        width: 10%;
+    }
+    50%{
+        width: 100%;
+    }
+    100%{
+       width: 10%; 
+    }
+} */
+
+/* scrollbar */
+
+body::-webkit-scrollbar {
+    width: 4px;
+    /* ширина scrollbar */
+}
+
+body::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.9);
+    /* цвет дорожки */
+}
+
+body::-webkit-scrollbar-thumb {
+    background-color: #74e8ff;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 25px #91EBFE);
+    /* цвет плашки */
+}
+
+h1, h2, h3, h4, h5, p, span {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+input {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+.container {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.header {
+    display: block;
+    background-image: url('../img/header/photo-1568559598349-dbf322d50a48.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: auto;
+}
+
+.header__line {
+    display: block;
+    position: relative;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 30vh;
+    padding-top: 1%;
+}
+
+.header__logo {
+    display: block;
+    width: 5%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.header__logo img {
+    width: 100%;
+    height: 100%;
+}
+
+.header__nav {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 20vh;
+}
+
+.header__neon {
+    display: block;
+    background-image: url('../img/neon/neon-animation.svg');
+    background-repeat: no-repeat;
+    background-position-x: center;
+    height: 20vh;
+    margin: -1% auto;
+    animation: neonAnimation 20s ease-in-out infinite;
+}
+
+@keyframes neonAnimation {
+    0% {
+        width: 0%;
+    }
+    30% {
+        width: 100%;
+    }
+    35% {}
+    70% {}
+    80% {
+        width: 100%;
+    }
+    90% {
+        width: 0%;
+    }
+    100% {
+        width: 0;
+    }
+}
+
+.header__flex-nav {
+    display: flex;
+    position: absolute;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    top: 30%;
+    left: 5%;
+    right: 5%;
+}
+
+.header__nav-block-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 40%;
+}
+
+.header__user {
+    display: block;
+    position: absolute;
+    top: 60%;
+    text-align: center;
+    left: 47%;
+}
+
+.header__content {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: auto;
+}
+
+.header__content-flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.header__content-text {
+    position: absolute;
+    width: 45%;
+    height: auto;
+    padding-left: 10%;
+    z-index: 10;
+}
+
+.header__h2 {
+    display: block;
+    padding-left: 5%;
+    padding-top: 4%;
+    padding-bottom: 5%;
+}
+
+.header__h2 h2 {
+    text-shadow: 0px 0px 25px #91EBFE;
+}
+
+.header__content-text-h3 {
+    display: block;
+    width: 90%;
+    text-align: left;
+    padding-bottom: 10%;
+}
+
+.header__content-text-h3 {
+    word-spacing: 5px;
+    letter-spacing: 3px;
+}
+
+.header__content-button {
+    display: block;
+    width: 60%;
+    height: auto;
+    padding: 1%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin-left: 12%;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.header__content-button:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 25px #91EBFE);
+}
+
+.container__content-img {
+    display: block;
+    background-color: rgba(10, 10, 10, 0.4);
+    width: 100%;
+    height: 70vh;
+    -webkit-clip-path: polygon(60% 0%, 100% 0, 100% 100%, 0 200%);
+    clip-path: polygon(60% 0%, 100% 0, 100% 100%, 0 250%)
+}
+
+.container__content-box-img {
+    display: block;
+    width: 45%;
+    height: auto;
+    margin-left: auto;
+    margin-right: 5%;
+    margin-top: 7%;
+}
+
+.container__content-box-img img {
+    width: 100%;
+    height: auto;
+}
+
+/* main-page->section__advantages */
+
+.advantages {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.advantages__heading {
+    display: block;
+    width: 100%;
+}
+
+.advantages__heading-mixed {
+    display: flex;
+    margin: auto;
+    justify-content: center;
+    padding-top: 1%;
+}
+
+.advantages__heading-mixed h2, .advantages__heading-mixed h1 {
+    padding-left: 1%;
+    padding-right: 1%;
+}
+
+.advantages__box-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    position: relative;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.advantages__advantage-block {
+    display: block;
+    position: absolute;
+    background-image: url('../img/background/Luxury_Black_Background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border: 1px solid #9BFEF9;
+}
+
+.advantageBlock1 {
+    width: 20%;
+    height: 60vh;
+    margin-left: 0;
+    transition: .5s ease-in-out;
+}
+
+.advantageBlock2 {
+    width: 20%;
+    height: 60vh;
+    margin-left: 15%;
+    margin-top: 10%;
+    z-index: 10;
+    transition: .5s ease-in-out;
+}
+
+.advantageBlock3 {
+    width: 20%;
+    height: 60vh;
+    margin-left: 65%;
+    margin-top: 10%;
+    z-index: 10;
+    transition: .5s ease-in-out;
+}
+
+.advantageBlock4 {
+    width: 20%;
+    height: 60vh;
+    margin-left: 65%;
+    margin-top: 10%;
+    z-index: 10;
+    transition: .5s ease-in-out;
+}
+
+.advantageBlock5 {
+    width: 20%;
+    height: 60vh;
+    margin-left: 80%;
+    transition: .5s ease-in-out;
+}
+
+.advantages__active {
+    width: 30%;
+    height: 80vh;
+    margin-left: 35%;
+    margin-top: 5%;
+    z-index: 100;
+    border: 1px solid #9BFEF9;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 10px #91EBFE);
+    transition: .5s ease-in-out;
+}
+
+.new-model {
+    display: block;
+    position: relative;
+    overflow-x: hidden;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100vh;
+}
+
+.new-model__flex-box {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: hidden;
+}
+
+.new-model__heading {
+    display: block;
+    position: absolute;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    z-index: 100;
+}
+
+.new-model__heading h2 {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 10px #91EBFE);
+}
+
+.new-model__box-1 {
+    display: block;
+    position: absolute;
+    background-image: url('../img/main_page_new_model/porsche1.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 50%;
+    height: 100vh;
+    -webkit-clip-path: polygon(0% 0%, 50% 0%, 100% 100%, 0 100%);
+    clip-path: polygon(0% 0%, 70% 0%, 100% 100%, 0 100%);
+    transition: 1s ease-in-out;
+}
+
+.new-model__box-2 {
+    display: block;
+    position: absolute;
+    background-image: url('../img/main_page_new_model/porshe911.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 65%;
+    height: 100vh;
+    left: 17%;
+    -webkit-clip-path: polygon(0% 0%, 47% 0%, 100% 100%, 60% 100%);
+    clip-path: polygon(0% 0%, 47% 0%, 100% 100%, 45% 100%);
+    transition: 1s ease-in-out;
+}
+
+.new-model__box-3 {
+    display: block;
+    position: absolute;
+    background-image: url(../img/main_page_new_model/iris.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.2);
+    width: 53%;
+    height: 100vh;
+    right: 0;
+    -webkit-clip-path: polygon(0% 0%, 100% 0, 100% 100%, 64% 100%);
+    clip-path: polygon(0% 0%, 100% 0, 100% 100%, 64% 100%);
+    transition: 1s ease-in-out;
+}
+
+/* my-hr
+
+.mu-hr {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/bgHR.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    height: 20vh;
+    overflow: hidden;
+}
+
+.mu-hr__neon-left {
+    display: block;
+    position: absolute;
+    background-image: url('../img/neon/neon-left.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    left: 0;
+    top: -15%;
+    width: 50%;
+    height: 15vh;
+}
+
+.mu-hr__neon-right {
+    display: block;
+    position: absolute;
+    background-image: url('../img/neon/neon-right.svg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    right: 0;
+    top: 40%;
+    width: 50%;
+    height: 15vh;
+}
+
+.mu-hr__neon-left-shell {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 20vh;
+    left: 0;
+    overflow: hidden;
+}
+
+.mu-hr__neon-right-shell {
+    display: block;
+    position: absolute;
+    width: 50%;
+    height: 20vh;
+    right: 0;
+    overflow: hidden;
+}
+
+.mu-hr__logo {
+    display: block;
+    width: 4%;
+    height: auto;
+    margin: 0 auto;
+    padding: 3%;
+}
+
+.mu-hr__logo img {
+    width: 100%;
+    height: auto;
+} */
+
+/* popular-cars */
+
+.popular-cars {
+    display: block;
+    background-image: url('../img/background/383292-black-lozenge-abstract-minimalism-artwork.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: auto;
+    padding-bottom: 2%;
+}
+
+.popular-cars__heading {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    width: 100%;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.popular-cars__car-block {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 5% auto;
+}
+
+.popular-cars__car-block-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.popular-cars__car-block-content {
+    display: block;
+    width: 90%;
+    height: auto;
+}
+
+.popular-cars__content-h2 {
+    display: block;
+    width: 80%;
+    margin: 0 auto;
+    padding-bottom: 2%;
+    text-align: center;
+    text-shadow: 0px 0px 25px #91EBFE;
+}
+
+.popular-cars__content-h3 {
+    display: block;
+    width: 100%;
+    padding-top: 8%;
+    padding-bottom: 5%;
+}
+
+.popular-cars__content-button-show {
+    display: block;
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin-left: 12%;
+    cursor: pointer;
+    margin: 2% auto;
+    transition: .3s ease-in-out;
+}
+
+.popular-cars__content-botton-book {
+    display: block;
+    width: 60%;
+    height: auto;
+    padding: 1%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin-left: 12%;
+    cursor: pointer;
+    margin: 5% auto;
+    transition: .3s ease-in-out;
+}
+
+/* hover */
+
+.popular-cars__content-button-show:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 0px 10px #91EBFE);
+}
+
+.popular-cars__content-botton-book:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.15);
+    filter: drop-shadow(0px 0px 10px #91EBFE);
+}
+
+.popular-cars__car-block-img {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.popular-cars__car-block-img img {
+    width: 100%;
+    height: auto;
+}
+
+.popular-cars__img-reverse img {
+    transform: scaleX(-1);
+}
+
+.popular-cars__content-h3-right {
+    display: block;
+    width: 100%;
+    padding-top: 8%;
+    padding-bottom: 5%;
+    text-align: center;
+}
+
+/* block about */
+
+.about {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/background_about_block.png');
+    width: 100%;
+    height: 60vh;
+}
+
+.about__heading {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.about__content {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 5% auto;
+}
+
+.about__content-h3 {
+    text-align: center;
+}
+
+.about__button-show {
+    display: block;
+    width: 60%;
+    height: auto;
+    padding: .5%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 3% auto;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.about__button-show:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 10px #91EBFE);
+    transition: .3s ease-in-out;
+}
+
+.footer {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/footer/footer-background.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 180%;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 60vh;
+}
+
+.footer__logo-animate {
+    /* доделать */
+}
+
+.footer__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 88%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.footer__content-left {
+    display: block;
+    width: 30%;
+    height: auto;
+}
+
+.footer__social-heading {
+    display: block;
+    text-align: center;
+}
+
+.footer__flex-social {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    margin-top: 4%;
+}
+
+.footer__social-box {
+    display: block;
+    width: 80%;
+    height: auto;
+    padding: 1%;
+    cursor: pointer;
+}
+
+.footer__social-box img {
+    width: 100%;
+    height: auto;
+}
+
+.footer__content-center {
+    display: block;
+    text-align: center;
+}
+.footer__content-center h3{
+    cursor: pointer;
+}
+.footer__content-right {
+    display: block;
+    text-align: right;
+}
+.footer__content-right h3{
+    cursor: pointer;
 }
