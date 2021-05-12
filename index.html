@@ -8,11 +8,105 @@
     <title>CarCity - Главная страница</title>
     <link rel="stylesheet" href="css/main_style.css">
     <link rel="shortcut icon" href="img/logo/logo.png">
-
-    <link rel="stylesheet" href="css/font_and_fontMedia.css">
+    <link rel="stylesheet" href="css/style_autorization_registration.css">
+    <link rel="stylesheet" media="screen" href="css/font_and_fontMedia.css">
+    <link rel="stylesheet" media="screen" href="css/media_block_style.css">
 </head>
 
 <body>
+    <section class="block-autorization-and-registration" id="moduleBlockRegAuto">
+        <div class="block-registration" id="blockRegistration">
+            <!-- box-animate -->
+            <div class="block-animate__bar block-animate__top"></div>
+            <div class="block-animate__bar block-animate__right block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__bottom block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__left"></div>
+            <div class="block__close">
+                <img src="img/icons/cancel-white.png" alt="errorUpImage">
+            </div>
+            <div class="block-registration__heading">
+                <h3>Регистрация</h3>
+            </div>
+            <div class="block-registration__form-registration">
+                <form action="" method="post">
+                    <div class="block-registration__flex-fio">
+                        <div class="block-registration__fio-box">
+                            <label for="surname">Фамилия</label>
+                            <input type="text" name="surname">
+                        </div>
+                        <div class="block-registration__fio-box">
+                            <label for="name">Имя</label>
+                            <input type="text" name="name">
+                        </div>
+                        <div class="block-registration__fio-box">
+                            <label for="patronymic">Отчество</label>
+                            <input type="text" name="patronymic">
+                        </div>
+                    </div>
+                    <div class="block-registration__box-input">
+                        <label for="login">Логин</label>
+                        <input type="text" name="login">
+                    </div>
+                    <div class="block-registration__box-input">
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="block-registration__box-input">
+                        <label for="repeatPassword">Повторите пароль</label>
+                        <input type="password" name="repeatPassword">
+                    </div>
+                    <div class="block-registration__check-box">
+                        <div class="block-registration__flex-check-box">
+                            <input type="checkbox" name="check">
+                            <h3>Вы даете согласие на <span class="blue-link">обработку персональных данных</span> и
+                                соглашаетесь c
+                                <span class="blue-link">политикой конфиденциальности</span>
+                            </h3>
+                        </div>
+                    </div>
+                    <div class="block-registration__submit">
+                        <input type="submit" value="Зарегестрироваться">
+                    </div>
+                    <div class="block-registration__connect-autorization">
+                        <h3>Вы уже зарегестрированы?</h3>
+                        <h3 class="block-connect" id="registrationConnectAutorization">Авторизируйтесь</h3>
+                    </div>
+
+                </form>
+            </div>
+        </div>
+        <div class="block-autorization" id="blockAutorization">
+            <div class="block-animate__bar block-animate__top"></div>
+            <div class="block-animate__bar block-animate__right block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__bottom block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__left"></div>
+            <div class="block__close">
+                <img src="img/icons/cancel-white.png" alt="errorUpImage">
+            </div>
+            <div class="block-autorization__heading">
+                <h3>Авторизация</h3>
+            </div>
+            <div class="block-autorization__form-autorization">
+                <form action="" method="post">
+                    <div class="block-autorization__login">
+                        <label for="login">Логин</label>
+                        <input type="text" name="login">
+                    </div>
+                    <div class="block-autorization__password">
+                        <label for="password">Пароль</label>
+                        <input type="password" name="password">
+                    </div>
+                    <div class="block-autorization__submit">
+                        <input type="submit" value="Авторизироваться">
+                    </div>
+                    <div class="block-autorization__connect-registration">
+                        <h3>Ещё не зарегестрированы?</h3>
+                        <h3 class="block-connect" id="autorizationConnectRegistration">Зарегестрироваться</h3>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
     <header class="header">
         <div class="header__line">
             <div class="header__logo">
@@ -31,7 +125,7 @@
                 </div>
                 <div class="header__neon"></div>
             </div>
-            <div class="header__user">
+            <div class="header__user" id="buttonLogIn">
                 <h1>Log<br>in</h1>
             </div>
         </div>
@@ -72,23 +166,67 @@
             <div class="advantages__box-flex">
                 <div class="advantages__advantage-block advantageBlock1" id="advantageBlock1" data-active="0"
                     onclick="slideClick(this)">
-                    <!-- Доделать блоки преимуществ -->
+                    <div class="advantageBlock__heading">
+                        <h3>Мы заботимся<br> о вас</h3>
+                    </div>
+                    <div class="advantageBlock__advantage-img">
+                        <img src="img/advantages/coffee.png" alt="errorUpImage">
+                    </div>
+                    <div class="advantageBlock__content-text">
+                        <h3></h3>
+                    </div>
                 </div>
                 <div class="advantages__advantage-block advantageBlock2" id="advantageBlock2" data-active="0"
                     onclick="slideClick(this)">
-                    <!-- Доделать блоки преимуществ -->
+                    <div class="advantageBlock__heading">
+                        <h3>Высококвалифицированный
+                            персонал</h3>
+                    </div>
+                    <div class="advantageBlock__advantage-img">
+                        <img src="img/advantages/personal.png" alt="errorUpImage">
+                    </div>
+                    <div class="advantageBlock__content-text">
+                        <h3></h3>
+                    </div>
                 </div>
                 <div class="advantages__advantage-block advantages__active" id="advantageBlock3" data-active="1"
                     onclick="slideClick(this)">
-                    <!-- Доделать блоки преимуществ -->
+                    <div class="advantageBlock__heading">
+                        <h2>13</h2>
+                        <h3>Суперкаров для вас</h3>
+                    </div>
+                    <div class="advantageBlock__advantage-img">
+                        <img src="img/advantages/car-rental.png" alt="errorUpImage">
+                    </div>
+                    <div class="advantageBlock__content-text">
+                        <h3>Отлчиный выбор из 13 элитных автомобилей, весьма привлекательных, мощных и ухоженных. Про
+                            каждый из которых есть возможность просмотреть фотографии внешнего дизайна и салона, а также
+                            просмотреть технические характеристики.</h3>
+                    </div>
                 </div>
                 <div class="advantages__advantage-block advantageBlock4" id="advantageBlock4" data-active="0"
                     onclick="slideClick(this)">
-                    <!-- Доделать блоки преимуществ -->
+                    <div class="advantageBlock__heading">
+                        <h3>Гарантии <br>превыше всего</h3>
+                    </div>
+                    <div class="advantageBlock__advantage-img">
+                        <img src="img/advantages/garantii.png" alt="errorUpImage">
+                    </div>
+                    <div class="advantageBlock__content-text">
+                        <h3></h3>
+                    </div>
                 </div>
                 <div class="advantages__advantage-block advantageBlock5" id="advantageBlock5" data-active="0"
                     onclick="slideClick(this)">
-                    <!-- Доделать блоки преимуществ -->
+                    <div class="advantageBlock__heading">
+                        <h3>Мы на любом<br> устройстве</h3>
+                    </div>
+                    <div class="advantageBlock__advantage-img">
+                        <img src="img/advantages/platform.png" alt="errorUpImage">
+                    </div>
+                    <div class="advantageBlock__content-text">
+                        <h3></h3>
+                    </div>
                 </div>
             </div>
         </div>
@@ -209,7 +347,15 @@
     </section>
     <footer class="footer">
         <div class="footer__logo-animate">
-            <!-- Доделать анимированное лого -->
+            <div class="footer__neon-left-shell">
+                <div class="footer__neon-left footer-neon"></div>
+            </div>
+            <div class="footer__logo-img">
+                <img src="img/logo/logo.png" alt="errorUpImage">
+            </div>
+            <div class="footer__neon-right-shell">
+                <div class="footer__neon-right footer-neon"></div>
+            </div>
         </div>
         <div class="footer__flex">
             <div class="footer__content-left">
@@ -245,11 +391,16 @@
     <script type="text/javascript">
         //body
         let elementBody = document.querySelector('body');
-        // headerNeonLine
+        // headerNeonLine and footerNeon
         let headerNeon = document.querySelector('.header__neon');
+        let footerNeon = document.querySelectorAll('.footer-neon');
         setInterval(() => {
             bodyWidth = elementBody.clientWidth;
             headerNeon.style.backgroundSize = bodyWidth + 'px';
+            footerNeon.forEach((elem) => {
+                elem.style.width = bodyWidth / 2 + 'px';
+            });
+
         }, 1000);
         //progressBar
         let progressLine = document.querySelectorAll('.animate-section__line');
@@ -264,6 +415,7 @@
         });
     </script>
     <script src="js/main_script.js"></script>
+    <script src="js/script_registration_and_autorization.js"></script>
 </body>
 
 </html>

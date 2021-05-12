@@ -34,6 +34,27 @@ h3 {
     font-weight: 400;
 }
 
+label {
+    font-family: Rafale, serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
+input {
+    font-family: Rafale, serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
+span {
+    font-family: Rafale, serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
 /* font media */
 
 @media screen and (max-width: 1366px) {
@@ -81,5 +102,73 @@ h3 {
     }
     .about__content-h3 {
         font-size: 22px;
+    }
+    /* advantages-FONT-SIZE */
+    .advantageBlock1>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock1>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock1>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock2>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock2>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock2>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock3>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock3>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock3>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock4>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock4>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock4>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock5>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock5>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock5>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantages__active>.advantageBlock__heading {
+        font-size: 22px;
+    }
+    .advantages__active>.advantageBlock__content-text {
+        font-size: 15px;
+    }
+    .advantages__active>.advantageBlock__content-text h3 {
+        line-height: 26px;
+    }
+    .block-registration__heading {
+        font-size: 22px;
+    }
+    .block-autorization__heading {
+        font-size: 22px;
+    }
+    .block-registration__check-box h3 {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .blue-link {
+        font-size: 14px;
     }
 }

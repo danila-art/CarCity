@@ -1,0 +1,8 @@
+@media screen and (max-width: 1366px) {
+    .footer__neon-left {
+        background-image: url('../img/neon/neon-left-adaptive-1366.svg');
+    }
+    .footer__neon-right {
+        background-image: url('../img/neon/neon-right-adaptive-1366.svg');
+    }
+}

@@ -1,0 +1,378 @@
+.block-autorization-and-registration {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100vh;
+    z-index: 1000;
+}
+
+.block__close {
+    display: block;
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    width: 5%;
+    height: auto;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.block__close:hover {
+    transform: scale(1.1);
+    transition: .3s ease-in-out;
+}
+
+.block__close img {
+    width: 100%;
+    height: auto;
+}
+
+/* block->registration */
+
+.block-registration {
+    display: none;
+    position: relative;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 90vh;
+    margin: 2% auto;
+    z-index: 1100;
+    overflow: hidden;
+    animation: widthBlockOpen .5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.block-registration__heading {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 2%;
+}
+
+/* box-animate-start */
+
+.block-animate__bar {
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    background: #91EBFE;
+    transition: all 1s linear;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.block-animate__delay {
+    animation-delay: .9s;
+    -webkit-animation-delay: .9s;
+}
+
+.block-animate__top {
+    top: 0;
+    left: 0;
+}
+
+.block-animate__right {
+    top: 8%;
+    right: -4.8%;
+    transform: rotate(90deg);
+}
+
+.block-animate__bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.block-animate__left {
+    top: 8%;
+    left: -4.8%;
+    transform: rotate(90deg);
+}
+
+@-webkit-keyframes h-move {
+    0% {
+        left: -5px;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+@keyframes h-move {
+    0% {
+        left: -5px;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.block-animate__top, .block-animate__bottom {
+    -webkit-animation-name: h-move;
+    animation-name: h-move;
+}
+
+@-webkit-keyframes v-move {
+    0% {
+        top: -5px;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+@keyframes v-move {
+    0% {
+        top: -5px;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+.block-animate__right, .block-animate__left {
+    -webkit-animation-name: v-move;
+    animation-name: v-move;
+}
+
+/* box-animate-end */
+
+/* form-registration */
+
+.block-registration__form-registration {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 2% auto;
+}
+
+.block-registration__form-registration label {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.block-registration__form-registration input[type=text], .block-registration__form-registration input[type=password] {
+    width: 100%;
+    background-color: inherit;
+    outline: none;
+    border: 2px solid white;
+    padding: 2%;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+    transform: scaleX(1.1);
+    transition: .3s ease-in-out;
+}
+
+.block-registration__flex-fio {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.block-registration__fio-box {
+    display: block;
+    width: 40%;
+    height: auto;
+    padding-top: 1%;
+}
+
+.block-registration__box-input {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 1% auto;
+    padding: 1%;
+}
+
+.block-registration__check-box {
+    display: block;
+    width: 70%;
+    height: auto;
+    margin: 2% auto;
+}
+
+.block-registration__flex-check-box {
+    display: flex;
+}
+
+.block-registration__check-box input[type=checkbox] {
+    margin: 2%;
+}
+
+.blue-link {
+    color: #9BFEF9;
+    cursor: pointer;
+}
+
+.block-registration__check-box h3 {
+    display: inline;
+    float: left;
+}
+
+.block-registration__check-box-h3 {
+    float: left;
+}
+
+.block-registration__submit {
+    display: block;
+    padding: 1%;
+    margin-top: 3%;
+}
+
+.block-registration__submit input {
+    display: block;
+    background-color: inherit;
+    width: 60%;
+    height: auto;
+    padding: 1.5%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    transition: .3s ease-in-out;
+}
+
+.block-registration__submit input:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+}
+
+.block-registration__connect-autorization {
+    display: block;
+    text-align: center;
+}
+
+.block-connect {
+    color: #91EBFE;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.block-connect:hover {
+    transform: scaleX(1.1);
+    transition: .3s ease-in-out;
+}
+
+/* .block-autorization */
+
+.block-autorization {
+    display: none;
+    position: relative;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: 60vh;
+    margin: 10% auto;
+    z-index: 1100;
+    overflow: hidden;
+    animation: widthBlockOpen .5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+@keyframes widthBlockOpen {
+    0% {
+        width: 0;
+    }
+    50% {
+        width: 50%;
+    }
+    100% {
+        width: 50%;
+    }
+}
+
+.block-autorization__heading {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-align: center;
+    padding-top: 2%;
+}
+
+.block-autorization__form-autorization {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 2% auto;
+}
+
+.block-autorization__login {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 1% auto;
+    padding: 1%;
+}
+
+.block-autorization__password {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 1% auto;
+    padding: 1%;
+}
+
+.block-autorization__form-autorization label {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+.block-autorization__form-autorization input[type=text], .block-autorization__form-autorization input[type=password] {
+    width: 100%;
+    background-color: inherit;
+    outline: none;
+    border: 2px solid white;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+}
+
+.block-autorization__submit {
+    display: block;
+    margin-top: 5%;
+}
+
+.block-autorization__submit input {
+    display: block;
+    background-color: inherit;
+    width: 50%;
+    height: auto;
+    padding: 1.5%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    cursor: pointer;
+    color: white;
+    margin: 0 auto;
+    transition: .3s ease-in-out;
+}
+
+.block-autorization__submit:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .3s ease-in-out;
+}
+
+.block-autorization__connect-registration {
+    display: block;
+    text-align: center;
+    margin-top: 3%;
+}
