@@ -28,6 +28,8 @@ function slideClick(element) {
 const newModelBox1 = document.getElementById('newModelBox1');
 const newModelBox2 = document.getElementById('newModelBox2');
 const newModelBox3 = document.getElementById('newModelBox3');
+// начальное положение блоков
+
 newModelBox1.addEventListener('click', () => {
     newModelBox2.style.clipPath = "polygon(0% 0%, 60% 0%, 100% 100%, 45% 100%)";
     newModelBox3.style.clipPath = "polygon(0% 0%, 100% 0, 100% 100%, 64% 100%)";

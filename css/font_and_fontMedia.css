@@ -1,3 +1,7 @@
+/* Прогрузка шрифтов и медиа запросы для главной страницы
+!здесь находится медиа для header and footer использовать на 
+!всех страницах.
+*/
 @font-face {
     font-family: "Hemicube_Type";
     src: url('../font/hemicube-bold/HemicubeType_PERSONAL_USE_ONLY.ttf');
@@ -33,7 +37,10 @@ h3 {
     font-style: normal;
     font-weight: 400;
 }
-
+a{
+    text-decoration: none;
+    color: inherit;
+}
 label {
     font-family: Rafale, serif;
     color: white;

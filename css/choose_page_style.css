@@ -1,0 +1,97 @@
+.header {
+    background-image: url('../img/shoose_car_page_img/porshe911.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: auto;
+}
+
+.header__content {
+    display: block;
+}
+
+.header__content-slide-1 {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.slide-1 {
+    display: block;
+    width: auto;
+    height: auto;
+}
+
+.slide-1__flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.slide-1__heading {
+    display: block;
+    position: absolute;
+    width: 100%;
+    z-index: 110;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.slide-1__heading h2 {
+    text-shadow: 0px 0px 25px #91EBFE;
+}
+
+.slide-1__heading-inner {
+    display: block;
+    text-align: center;
+}
+
+.slide-1__backround-clip-path {
+    display: block;
+    background-color: rgba(63, 63, 63, 0.4);
+    -webkit-clip-path: polygon(0% 0%, 60% 0, 100% 100%, 0 250%);
+    clip-path: polygon(0% 0%, 60% 0, 100% 100%, 0 250%);
+    height: auto;
+    width: 60%;
+    padding-bottom: 2%;
+}
+
+.slide-1__img-car {
+    width: 60%;
+    height: auto;
+    padding-top: 5%;
+    padding-left: 5%;
+}
+
+.slide-1__img-car img {
+    width: 100%;
+    height: auto;
+}
+.slide-1__buttons{
+    display: block;
+    width: 80%;
+}
+.slide-1__show-more-button {
+    display: block;
+    width: 50%;
+    height: auto;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 2% auto;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    cursor: pointer;
+}
+
+.slide-1__button-book {
+    display: block;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 2% auto;
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    cursor: pointer;
+}
