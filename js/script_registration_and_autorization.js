@@ -1,4 +1,4 @@
-//open module block
+//open and close module block
 const buttonLogIn = document.getElementById('buttonLogIn');
 const moduleBlockRegAuto = document.getElementById('moduleBlockRegAuto');
 const blockRegistration = document.getElementById('blockRegistration');
@@ -29,5 +29,31 @@ buttonLogIn.addEventListener('click', () => {
             blockRegistration.style.display = 'none';
             blockAutorization.style.display = 'none';
         });
+    });
+});
+
+// checked form registr
+const formRegistration = document.getElementById('formRegistrattion');
+formRegistration.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let inputCollection = formRegistration.querySelectorAll('.input__text');
+    inputCollection.forEach((inputElem) => {
+        if (inputElem.value == '') {
+            inputElem.placeholder = 'Поле не заполнено';
+        }
+    })
+    
+});
+
+
+//checked form autorization
+const formAutorization = document.getElementById('formAutorization');
+formAutorization.addEventListener('submit', (event) => {
+    event.preventDefault();
+    let inputCollection = formAutorization.querySelectorAll('.input__autorization');
+    inputCollection.forEach((inputElem) => {
+       if (inputElem.value == '') {
+           inputElem.placeholder = 'Поле не заполнено';
+       } 
     });
 });
