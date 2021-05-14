@@ -1,5 +1,7 @@
 .header {
     background-image: url('../img/shoose_car_page_img/porshe911.jpg');
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -47,11 +49,12 @@
 
 .slide-1__backround-clip-path {
     display: block;
-    background-color: rgba(63, 63, 63, 0.4);
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-clip-path: polygon(0% 0%, 60% 0, 100% 100%, 0 250%);
     clip-path: polygon(0% 0%, 60% 0, 100% 100%, 0 250%);
     height: auto;
     width: 60%;
+    padding-top: 7%;
     padding-bottom: 2%;
 }
 
@@ -66,10 +69,12 @@
     width: 100%;
     height: auto;
 }
-.slide-1__buttons{
+
+.slide-1__buttons {
     display: block;
     width: 80%;
 }
+
 .slide-1__show-more-button {
     display: block;
     width: 50%;
@@ -78,9 +83,8 @@
     border: 2px solid #9BFEF9;
     border-radius: 20px;
     margin: 2% auto;
-    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
-    filter: drop-shadow(0px 0px 15px #91EBFE);
     cursor: pointer;
+    transition: .3s ease-in-out;
 }
 
 .slide-1__button-book {
@@ -91,7 +95,110 @@
     border: 2px solid #9BFEF9;
     border-radius: 20px;
     margin: 2% auto;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.slide-1__show-more-button :hover {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
     filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .3s ease-in-out;
+}
+
+.slide-1__button-book:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .3s ease-in-out;
+}
+
+/* section->filter */
+
+.filter {
+    display: block;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: auto;
+    padding-bottom: 1%;
+}
+
+.filter__heading {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: .5%;
+    padding-bottom: .5%;
+    text-align: center;
+}
+
+.filter__flex-box {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 1%;
+}
+
+.filter__box-select {
+    display: block;
+    width: 30%;
+    height: auto;
+    text-align: center;
+}
+
+.filter__show-button {
+    display: block;
+    width: 25%;
+    height: auto;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 10px;
+    margin: 3% auto;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+}
+
+.filter__show-button:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .3s ease-in-out;
+}
+
+.filter__select {
+    display: block;
+    border: 1px solid white;
+    border-radius: 10px;
+    width: 60%;
+    height: auto;
+    padding: 1%;
+    margin: 0 auto;
     cursor: pointer;
 }
+
+.filter__select-head {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 5%;
+    padding-right: 5%;
+}
+
+.filter__icon {
+    width: 10%;
+    height: auto;
+    padding: 1%;
+}
+
+.filter__icon img {
+    width: 100%;
+    height: auto;
+}
+
+.filter__inner-content {}

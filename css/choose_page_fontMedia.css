@@ -1,7 +1,10 @@
 /* Медиа запросы для страница "Выбрать авто" */
 
 @media screen and (max-width: 1366px) {
-    .slide-1__heading-inner{
+    .slide-1__heading-inner {
         font-size: 22px;
+    }
+    .filter__select-heading h3 {
+        font-size: 16px;
     }
 }
