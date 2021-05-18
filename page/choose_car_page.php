@@ -144,8 +144,7 @@
                 </div>
                 <div class="slide-1__backround-clip-path">
                     <div class="slide-1__img-car">
-                        <img src="../img/cars_png/kisspng-porsche-911-turbo-s-cabriolet-porsche-930-sports-c-black-porsche-911-turbo-car-5a748d924b5d79.0030889815175878583087.png"
-                            alt="errorUpImage">
+                        <img src="../img/cars_png/kisspng-porsche-911-turbo-s-cabriolet-porsche-930-sports-c-black-porsche-911-turbo-car-5a748d924b5d79.0030889815175878583087.png" alt="errorUpImage">
                     </div>
                     <div class="slide-1__buttons">
                         <div class="slide-1__show-more-button">
@@ -226,9 +225,103 @@
         </div>
     </section>
     <section class="cars">
-
+        <div class="cars__heading">
+            <h3>Наши машины:</h3>
+        </div>
+        <?php
+        require_once '../php/connectDataBase.php';
+        $resultCar = $linkCarCityDataBase->query("SELECT `car`.`id_car`, `car`.`name`, `car`.`preview_main_choose_page`, `png_img`.`id_car`, `png_img`.`img_png` FROM `car` INNER JOIN `png_img` ON `car`.`id_car` = `png_img`.`id_car`;");
+        while ($carData = mysqli_fetch_assoc($resultCar)) {
+            $imgPngCar = base64_encode($carData['img_png']);
+            $id_car = $carData['id_car'];
+            if ($id_car % 2) {
+                echo "<div class=\"cars__car-flex car-flex\">
+                        <div class=\"car-flex__text-content\">
+                            <div class=\"car-flex__text-content-heading\">
+                                <h2>{$carData['name']}</h2>
+                            </div>
+                            <div class=\"car-flex__text-content-h3\">
+                                <h3>{$carData['preview_main_choose_page']}</h3>
+                            </div>
+                            <div class=\"car-flex__text-content-show-more\">
+                                <h3>Узнать больше</h3>
+                            </div>
+                            <div class=\"car-flex__text-content-book\">
+                                <h3>Забронировать</h3>
+                            </div>
+                        </div>
+                        <div class=\"car-flex__img-png\">
+                            <img src=\"data:image/png;base64,$imgPngCar\" alt=\"errorUpImage\">
+                        </div>
+                    </div>";
+            } else {
+                echo "<div class=\"cars__car-flex car-flex\">
+                        <div class=\"car-flex__img-png\">
+                                <img src=\"data:image/png;base64,$imgPngCar\" alt=\"errorUpImage\">
+                        </div>
+                        <div class=\"car-flex__text-content\">
+                            <div class=\"car-flex__text-content-heading\">
+                                <h2>{$carData['name']}</h2>
+                            </div>
+                            <div class=\"car-flex__text-content-h3 car-flex__text-content-h3-right\">
+                                <h3>{$carData['preview_main_choose_page']}</h3>
+                            </div>
+                            <div class=\"car-flex__text-content-show-more\">
+                                <h3>Узнать больше</h3>
+                            </div>
+                            <div class=\"car-flex__text-content-book\">
+                                <h3>Забронировать</h3>
+                            </div>
+                        </div>
+                    </div>";
+            }
+        }
+        ?>
     </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__logo-animate">
+            <div class="footer__neon-left-shell">
+                <div class="footer__neon-left footer-neon"></div>
+            </div>
+            <div class="footer__logo-img">
+                <img src="../img/logo/logo.png" alt="errorUpImage">
+            </div>
+            <div class="footer__neon-right-shell">
+                <div class="footer__neon-right footer-neon"></div>
+            </div>
+        </div>
+        <div class="footer__flex">
+            <div class="footer__content-left">
+                <div class="footer__social-heading">
+                    <h3>Мы в соц сетях:</h3>
+                </div>
+                <div class="footer__flex-social">
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/facebook.png" alt="errorUpImage">
+                    </div>
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/instagram.png" alt="errorUpImage">
+                    </div>
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/twitter.png" alt="errorUpImage">
+                    </div>
 
+                </div>
+            </div>
+            <div class="footer__content-center">
+                <h3>О нас</h3>
+                <h3>Контакты</h3>
+                <h3>Карта сайта</h3>
+                <h3>Выбрать авто</h3>
+            </div>
+            <div class="footer__content-right">
+                <h3>Политика конфидициальности</h3>
+                <h3>Обработка персональных данных</h3>
+                <h3>Условия аренды</h3>
+            </div>
+        </div>
+    </footer>
     <!-- js script  -->
     <script type="text/javascript">
         //body

@@ -201,4 +201,109 @@
     height: auto;
 }
 
-.filter__inner-content {}
+/* .filter__inner-content {} */
+
+.cars {
+    display: block;
+    background-image: url('../img/background/383292-black-lozenge-abstract-minimalism-artwork.jpg');
+    background-repeat: no-repeat;
+    background-position: fixed;
+    background-size: cover;
+    width: 100%;
+    height: auto;
+}
+
+.cars__heading {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.cars__car-flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.car-flex {
+    justify-content: space-between;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    align-items: center;
+}
+
+.car-flex__text-content {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.car-flex__text-content-heading {
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+    text-shadow: 0px 0px 25px #91EBFE;
+}
+
+.car-flex__text-content-h3 {
+    display: block;
+    width: 100%;
+    height: auto;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.car-flex__text-content-h3-right {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.car-flex__text-content-show-more {
+    display: block;
+    width: 60%;
+    height: auto;
+    /* padding: .5%; */
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 4% auto;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.car-flex__text-content-book {
+    display: block;
+    width: 50%;
+    height: auto;
+    /* padding: .5%; */
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 4% auto;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.car-flex__text-content-show-more:hover, .car-flex__text-content-book:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .5s;
+}
+
+.car-flex__img-png {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.car-flex__img-png img {
+    width: 100%;
+    height: auto;
+}

@@ -125,9 +125,17 @@
                 </div>
                 <div class="header__neon"></div>
             </div>
-            <div class="header__user" id="buttonLogIn">
-                <h1>Log<br>in</h1>
-            </div>
+            <?php
+                if (!empty($_COOKIE['loginUser'])) {
+                    echo "Пользователь есть";
+                } else {
+                    echo "<div class=\"header__user\" id=\"buttonLogIn\">
+                            <h1>Log<br>in</h1>
+                        </div>";
+                }
+                
+            ?>
+
         </div>
         <div class="header__content">
             <div class="header__content-flex">
