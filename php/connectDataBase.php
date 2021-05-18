@@ -5,5 +5,5 @@ $database = 'car_city_database'; // имя базы данных
 $user = 'root'; // имя пользователя
 $password = 'root'; // пароль
 
-$linkCarCityDataBase = mysqli_connect($host, $user, $password, $database);;
+$linkCarCityDataBase = mysqli_connect($host, $user, $password, $database);
 ?>

@@ -35,14 +35,18 @@ buttonLogIn.addEventListener('click', () => {
 // checked form registr
 const formRegistration = document.getElementById('formRegistrattion');
 formRegistration.addEventListener('submit', (event) => {
+    let errorArrReg = [];
     event.preventDefault();
     let inputCollection = formRegistration.querySelectorAll('.input__text');
     inputCollection.forEach((inputElem) => {
         if (inputElem.value == '') {
             inputElem.placeholder = 'Поле не заполнено';
+            errorArrReg.push(false);
         }
-    })
-    
+    });
+    if (errorArrReg.length == 0) {
+        formRegistration.submit();
+    }
 });
 
 
@@ -50,10 +54,15 @@ formRegistration.addEventListener('submit', (event) => {
 const formAutorization = document.getElementById('formAutorization');
 formAutorization.addEventListener('submit', (event) => {
     event.preventDefault();
+    let errorArrAuto = [];
     let inputCollection = formAutorization.querySelectorAll('.input__autorization');
     inputCollection.forEach((inputElem) => {
-       if (inputElem.value == '') {
-           inputElem.placeholder = 'Поле не заполнено';
-       } 
+        if (inputElem.value == '') {
+            inputElem.placeholder = 'Поле не заполнено';
+            errorArrAuto.push(false);
+        }
     });
+    if (errorArrAuto.length == 0) {
+        formAutorization.submit();
+    }
 });

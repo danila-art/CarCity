@@ -31,7 +31,7 @@
                 <h3>Регистрация</h3>
             </div>
             <div class="block-registration__form-registration">
-                <form action="" method="post" id="formRegistrattion">
+                <form action="../php/registration_user.php" method="post" id="formRegistrattion">
                     <div class="block-registration__flex-fio">
                         <div class="block-registration__fio-box">
                             <label for="surname">Фамилия</label>
@@ -90,7 +90,7 @@
                 <h3>Авторизация</h3>
             </div>
             <div class="block-autorization__form-autorization">
-                <form action="" method="post" id="formAutorization">
+                <form action="../php/autorization_user.php" method="post" id="formAutorization">
                     <div class="block-autorization__login">
                         <label for="login">Логин</label>
                         <input type="text" class="input__autorization" name="login">

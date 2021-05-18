@@ -165,11 +165,14 @@ span {
     .advantages__active>.advantageBlock__content-text h3 {
         line-height: 26px;
     }
+    /* block-registration-autorization */
     .block-registration__heading {
         font-size: 22px;
+        line-height: 22px;
     }
     .block-autorization__heading {
         font-size: 22px;
+        line-height: 22px;
     }
     .block-registration__check-box h3 {
         font-size: 14px;

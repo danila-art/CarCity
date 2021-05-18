@@ -1,4 +1,4 @@
-<!-- Страница -> о нас -->
+<!-- Страница -> узнать больше о оределенной машине -->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6,7 +6,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car City - О нас</title>
+    <title>Car City - Ваш Аккаунт</title>
     <!-- header and footer style-->
     <link rel="stylesheet" href="../css/main_style.css">
     <link rel="stylesheet" href="../css/style_autorization_registration.css">
@@ -29,7 +29,7 @@
                 <h3>Регистрация</h3>
             </div>
             <div class="block-registration__form-registration">
-                <form action="" method="post" id="formRegistrattion">
+                <form action="../php/registration_user.php" method="post" id="formRegistrattion">
                     <div class="block-registration__flex-fio">
                         <div class="block-registration__fio-box">
                             <label for="surname">Фамилия</label>
@@ -88,7 +88,7 @@
                 <h3>Авторизация</h3>
             </div>
             <div class="block-autorization__form-autorization">
-                <form action="" method="post" id="formAutorization">
+                <form action="../php/autorization_user.php" method="post" id="formAutorization">
                     <div class="block-autorization__login">
                         <label for="login">Логин</label>
                         <input type="text" class="input__autorization" name="login">

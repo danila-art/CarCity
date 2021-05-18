@@ -28,36 +28,36 @@
                 <h3>Регистрация</h3>
             </div>
             <div class="block-registration__form-registration">
-                <form action="" method="post">
+                <form action="php/registration_user.php" method="post" id="formRegistrattion">
                     <div class="block-registration__flex-fio">
                         <div class="block-registration__fio-box">
                             <label for="surname">Фамилия</label>
-                            <input type="text" name="surname">
+                            <input type="text" class="input__text" name="surname">
                         </div>
                         <div class="block-registration__fio-box">
                             <label for="name">Имя</label>
-                            <input type="text" name="name">
+                            <input type="text" class="input__text" name="name">
                         </div>
                         <div class="block-registration__fio-box">
                             <label for="patronymic">Отчество</label>
-                            <input type="text" name="patronymic">
+                            <input type="text" class="input__text" name="patronymic">
                         </div>
                     </div>
                     <div class="block-registration__box-input">
                         <label for="login">Логин</label>
-                        <input type="text" name="login">
+                        <input type="text" class="input__text" name="login">
                     </div>
                     <div class="block-registration__box-input">
                         <label for="password">Пароль</label>
-                        <input type="password" name="password">
+                        <input type="password" class="input__text" name="password">
                     </div>
                     <div class="block-registration__box-input">
                         <label for="repeatPassword">Повторите пароль</label>
-                        <input type="password" name="repeatPassword">
+                        <input type="password" class="input__text" name="repeatPassword">
                     </div>
                     <div class="block-registration__check-box">
                         <div class="block-registration__flex-check-box">
-                            <input type="checkbox" name="check">
+                            <input type="checkbox" class="input__check" name="check">
                             <h3>Вы даете согласие на <span class="blue-link">обработку персональных данных</span> и
                                 соглашаетесь c
                                 <span class="blue-link">политикой конфиденциальности</span>
@@ -87,14 +87,14 @@
                 <h3>Авторизация</h3>
             </div>
             <div class="block-autorization__form-autorization">
-                <form action="" method="post">
+                <form action="php/autorization_user.php" method="post" id="formAutorization">
                     <div class="block-autorization__login">
                         <label for="login">Логин</label>
-                        <input type="text" name="login">
+                        <input type="text" class="input__autorization" name="login">
                     </div>
                     <div class="block-autorization__password">
                         <label for="password">Пароль</label>
-                        <input type="password" name="password">
+                        <input type="password" class="input__autorization" name="password">
                     </div>
                     <div class="block-autorization__submit">
                         <input type="submit" value="Авторизироваться">
@@ -116,7 +116,7 @@
                 <div class="header__flex-nav">
                     <div class="header__nav-block-flex">
                         <h1><a href="">Home</a></h1>
-                        <h1><a href="page/choose_car_page.html">Choose Car</a></h1>
+                        <h1><a href="page/choose_car_page.php">Choose Car</a></h1>
                     </div>
                     <div class="header__nav-block-flex">
                         <h1><a href="">Contacts</a></h1>
@@ -163,8 +163,7 @@
                 <h1>Carcity?</h1>
             </div>
             <div class="advantages__box-flex">
-                <div class="advantages__advantage-block advantageBlock1" id="advantageBlock1" data-active="0"
-                    onclick="slideClick(this)">
+                <div class="advantages__advantage-block advantageBlock1" id="advantageBlock1" data-active="0" onclick="slideClick(this)">
                     <div class="advantageBlock__heading">
                         <h3>Мы заботимся<br> о вас</h3>
                     </div>
@@ -175,8 +174,7 @@
                         <h3></h3>
                     </div>
                 </div>
-                <div class="advantages__advantage-block advantageBlock2" id="advantageBlock2" data-active="0"
-                    onclick="slideClick(this)">
+                <div class="advantages__advantage-block advantageBlock2" id="advantageBlock2" data-active="0" onclick="slideClick(this)">
                     <div class="advantageBlock__heading">
                         <h3>Высококвалифицированный
                             персонал</h3>
@@ -188,8 +186,7 @@
                         <h3></h3>
                     </div>
                 </div>
-                <div class="advantages__advantage-block advantages__active" id="advantageBlock3" data-active="1"
-                    onclick="slideClick(this)">
+                <div class="advantages__advantage-block advantages__active" id="advantageBlock3" data-active="1" onclick="slideClick(this)">
                     <div class="advantageBlock__heading">
                         <h2>13</h2>
                         <h3>Суперкаров для вас</h3>
@@ -203,8 +200,7 @@
                             просмотреть технические характеристики.</h3>
                     </div>
                 </div>
-                <div class="advantages__advantage-block advantageBlock4" id="advantageBlock4" data-active="0"
-                    onclick="slideClick(this)">
+                <div class="advantages__advantage-block advantageBlock4" id="advantageBlock4" data-active="0" onclick="slideClick(this)">
                     <div class="advantageBlock__heading">
                         <h3>Гарантии <br>превыше всего</h3>
                     </div>
@@ -215,8 +211,7 @@
                         <h3></h3>
                     </div>
                 </div>
-                <div class="advantages__advantage-block advantageBlock5" id="advantageBlock5" data-active="0"
-                    onclick="slideClick(this)">
+                <div class="advantages__advantage-block advantageBlock5" id="advantageBlock5" data-active="0" onclick="slideClick(this)">
                     <div class="advantageBlock__heading">
                         <h3>Мы на любом<br> устройстве</h3>
                     </div>
