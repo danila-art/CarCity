@@ -67,141 +67,6 @@ span {
 
 /* font media */
 
-@media screen and (max-width: 1366px) {
-    h1 {
-        line-height: 35px;
-    }
-    h2 {
-        line-height: 35px;
-    }
-    h3 {
-        line-height: 35px;
-    }
-    .header h1 {
-        font-size: 26px;
-    }
-    .header__h2 h2 {
-        font-size: 38px;
-    }
-    .header__content-text-h3 h3 {
-        font-size: 22px;
-    }
-    .header__content-button h3 {
-        font-size: 24px;
-    }
-    .advantages__heading-mixed h2, .advantages__heading-mixed h1 {
-        font-size: 32px;
-    }
-    .new-model__heading h3, .new-model__heading h2 {
-        font-size: 32px;
-    }
-    .popular-cars__heading {
-        font-size: 32px;
-    }
-    .popular-cars__content-h2 h2 {
-        font-size: 36px;
-    }
-    .popular-cars__content-h3 h3 {
-        font-size: 22px;
-    }
-    .popular-cars__content-h3-right {
-        font-size: 22px;
-    }
-    .about__heading {
-        font-size: 32px;
-    }
-    .about__content-h3 {
-        font-size: 22px;
-    }
-    /* advantages-FONT-SIZE */
-    .advantageBlock1>.advantageBlock__heading {
-        font-size: 14px;
-    }
-    .advantageBlock1>.advantageBlock__content-text {
-        font-size: 10px;
-    }
-    .advantageBlock1>.advantageBlock__content-text h3 {
-        line-height: 20px;
-    }
-    .advantageBlock2>.advantageBlock__heading {
-        font-size: 14px;
-    }
-    .advantageBlock2>.advantageBlock__content-text {
-        font-size: 10px;
-    }
-    .advantageBlock2>.advantageBlock__content-text h3 {
-        line-height: 20px;
-    }
-    .advantageBlock3>.advantageBlock__heading {
-        font-size: 14px;
-    }
-    .advantageBlock3>.advantageBlock__content-text {
-        font-size: 10px;
-    }
-    .advantageBlock3>.advantageBlock__content-text h3 {
-        line-height: 20px;
-    }
-    .advantageBlock4>.advantageBlock__heading {
-        font-size: 14px;
-    }
-    .advantageBlock4>.advantageBlock__content-text {
-        font-size: 10px;
-    }
-    .advantageBlock4>.advantageBlock__content-text h3 {
-        line-height: 20px;
-    }
-    .advantageBlock5>.advantageBlock__heading {
-        font-size: 14px;
-    }
-    .advantageBlock5>.advantageBlock__content-text {
-        font-size: 10px;
-    }
-    .advantageBlock5>.advantageBlock__content-text h3 {
-        line-height: 20px;
-    }
-    .advantages__active>.advantageBlock__heading {
-        font-size: 22px;
-    }
-    .advantages__active>.advantageBlock__content-text {
-        font-size: 15px;
-    }
-    .advantages__active>.advantageBlock__content-text h3 {
-        line-height: 26px;
-    }
-    /* block-registration-autorization */
-    .block-registration__heading {
-        font-size: 22px;
-        line-height: 22px;
-    }
-    .block-autorization__heading {
-        font-size: 22px;
-        line-height: 22px;
-    }
-    .block-registration__check-box h3 {
-        font-size: 14px;
-        line-height: normal;
-    }
-    .blue-link {
-        font-size: 14px;
-    }
-    /* block-registration-autorization */
-    .block-registration__heading {
-        font-size: 22px;
-        line-height: 22px;
-    }
-    .block-autorization__heading {
-        font-size: 22px;
-        line-height: 22px;
-    }
-    .block-registration__check-box h3 {
-        font-size: 14px;
-        line-height: normal;
-    }
-    .blue-link {
-        font-size: 14px;
-    }
-}
-
 @media screen and (max-width: 1920px) {
     h1 {
         line-height: 42px;
@@ -341,7 +206,142 @@ span {
         font-size: 22px;
         line-height: 32px;
     }
-    .block-autorization-and-registration input[type=submit]{
+    .block-autorization-and-registration input[type=submit] {
         font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    h1 {
+        line-height: 35px;
+    }
+    h2 {
+        line-height: 35px;
+    }
+    h3 {
+        line-height: 35px;
+    }
+    .header h1 {
+        font-size: 26px;
+    }
+    .header__h2 h2 {
+        font-size: 38px;
+    }
+    .header__content-text-h3 h3 {
+        font-size: 22px;
+    }
+    .header__content-button h3 {
+        font-size: 24px;
+    }
+    .advantages__heading-mixed h2, .advantages__heading-mixed h1 {
+        font-size: 32px;
+    }
+    .new-model__heading h3, .new-model__heading h2 {
+        font-size: 32px;
+    }
+    .popular-cars__heading {
+        font-size: 32px;
+    }
+    .popular-cars__content-h2 h2 {
+        font-size: 36px;
+    }
+    .popular-cars__content-h3 h3 {
+        font-size: 22px;
+    }
+    .popular-cars__content-h3-right {
+        font-size: 22px;
+    }
+    .about__heading {
+        font-size: 32px;
+    }
+    .about__content-h3 {
+        font-size: 22px;
+    }
+    /* advantages-FONT-SIZE */
+    .advantageBlock1>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock1>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock1>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock2>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock2>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock2>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock3>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock3>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock3>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock4>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock4>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock4>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantageBlock5>.advantageBlock__heading {
+        font-size: 14px;
+    }
+    .advantageBlock5>.advantageBlock__content-text {
+        font-size: 10px;
+    }
+    .advantageBlock5>.advantageBlock__content-text h3 {
+        line-height: 20px;
+    }
+    .advantages__active>.advantageBlock__heading {
+        font-size: 22px;
+    }
+    .advantages__active>.advantageBlock__content-text {
+        font-size: 15px;
+    }
+    .advantages__active>.advantageBlock__content-text h3 {
+        line-height: 26px;
+    }
+    /* block-registration-autorization */
+    .block-registration__heading {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .block-autorization__heading {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .block-registration__check-box h3 {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .blue-link {
+        font-size: 14px;
+    }
+    /* block-registration-autorization */
+    .block-registration__heading {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .block-autorization__heading {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .block-registration__check-box h3 {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .blue-link {
+        font-size: 14px;
     }
 }
