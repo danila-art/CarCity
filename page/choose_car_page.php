@@ -244,7 +244,10 @@
                                 <h3>{$carData['preview_main_choose_page']}</h3>
                             </div>
                             <div class=\"car-flex__text-content-show-more\">
-                                <h3>Узнать больше</h3>
+                                <form action=\"show_more_car.php\" method=\"post\">
+                                    <input type=\"hidden\" name=\"post_id_car\" value=\"{$carData['id_car']}\">
+                                    <input type=\"submit\" value=\"Узнать больше\">
+                                </form>
                             </div>
                             <div class=\"car-flex__text-content-book\">
                                 <h3>Забронировать</h3>
@@ -267,7 +270,10 @@
                                 <h3>{$carData['preview_main_choose_page']}</h3>
                             </div>
                             <div class=\"car-flex__text-content-show-more\">
-                                <h3>Узнать больше</h3>
+                                <form action=\"show_more_car.php\" method=\"post\">
+                                    <input type=\"hidden\" name=\"post_id_car\" value=\"{$carData['id_car']}\">
+                                    <input type=\"submit\" value=\"Узнать больше\">
+                                </form>
                             </div>
                             <div class=\"car-flex__text-content-book\">
                                 <h3>Забронировать</h3>

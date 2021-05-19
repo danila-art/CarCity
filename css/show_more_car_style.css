@@ -1,0 +1,148 @@
+.header__honda-nsx {
+    background-image: url('../img/show_more_background/honda.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__kia-k5 {
+    background-image: url('../img/show_more_background/kia-k5.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__kia-stinger {
+    background-image: url('../img/show_more_background/kia-stinger.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__Lamborghini-Gallardo-black {
+    background-image: url('../img/show_more_background/lamborgini-black.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__Lamborghini-Gallardo-orange {
+    background-image: url('../img/show_more_background/lamborgini-orange.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__mazda-6 {
+    background-image: url('../img/show_more_background/mazda-6.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__mazda-cx-8 {
+    background-image: url('../img/show_more_background/mazda-cx-8.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__mazda-mx-5 {
+    background-image: url('../img/show_more_background/mazda-mx-5.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__mercedes-benz-amg-gt-coupe {
+    background-image: url('../img/show_more_background/mercedes-benz-amg-gt-coupe.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__mercedes-benz-cls {
+    background-image: url('../img/show_more_background/mersedes-benz-cls.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__nissan_gtr_35-blue {
+    background-image: url('../img/show_more_background/nissan-gtr-blue.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__nissan_gtr_35-orange {
+    background-image: url('../img/show_more_background/nissan-gtr-orange.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__porsche-911-carrera-s {
+    background-image: url('../img/show_more_background/porshe911.jpg');
+    background-color: rgba(10, 10, 10, 0.7);
+}
+
+.header__content-flex {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.header__content-img {
+    display: block;
+    background-color: rgba(10, 10, 10, 0.4);
+    width: 60%;
+    height: 80vh;
+    padding-top: 5%;
+    -webkit-clip-path: polygon(0% 0%, 100% 0%, 80% 100%, 0 250%);
+    clip-path: polygon(0% 0%, 100% 0%, 70% 100%, 0 250%);
+}
+
+.header__content-text {
+    display: block;
+    width: 40%;
+    height: auto;
+    margin-left: 50%;
+}
+
+.header__content-inner-text {
+    display: block;
+    width: 80%;
+    height: auto;
+    padding-top: 10%;
+}
+
+.header__content-inner-text-heading {
+    display: block;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.header__content-inner-text-heading h2 {
+    text-shadow: 0px 0px 5px #91EBFE;
+}
+
+.header__content-inner-text-briefly {
+    display: block;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.header__content-inner-text-preview {
+    display: block;
+    padding-top: 10%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+.header__content-inner-text-button-book {
+    display: block;
+    width: 60%;
+    height: auto;
+    padding: .5%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 0 auto;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.header__content-inner-text-button-book:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .5s ease-in-out;
+}
+
+.header__content-inner-block-img {
+    display: block;
+    width: 80%;
+    height: auto;
+}
+
+.header__content-inner-block-img img {
+    width: 100%;
+    height: auto;
+}

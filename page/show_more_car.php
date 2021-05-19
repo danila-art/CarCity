@@ -10,8 +10,11 @@
     <!-- header and footer style-->
     <link rel="stylesheet" href="../css/main_style.css">
     <link rel="stylesheet" href="../css/style_autorization_registration.css">
+    <link rel="stylesheet" href="../css/show_more_car_style.css">
     <!--header and footer font media -->
     <link rel="stylesheet" media="screen" href="../css/font_and_fontMedia.css">
+    <!-- font media this page -->
+    <!-- ------- -->
 </head>
 
 <body>
@@ -109,30 +112,110 @@
         </div>
     </section>
     <!-- header -->
-    <header class="header">
-        <div class="header__line">
-            <div class="header__logo">
-                <img src="../img/logo/logo.png" alt="">
+    <?php
+    if ($_POST['post_id_car'] == 1) {
+        echo "<header class=\"header header__honda-nsx \">";
+    }
+    if ($_POST['post_id_car'] == 2) {
+        echo "<header class=\"header header__kia-k5\">";
+    }
+    if ($_POST['post_id_car'] == 3) {
+        echo "<header class=\"header header__kia-stinger\">";
+    }
+    if ($_POST['post_id_car'] == 4) {
+        echo "<header class=\"header header__Lamborghini-Gallardo-black\">";
+    }
+    if ($_POST['post_id_car'] == 5) {
+        echo "<header class=\"header header__Lamborghini-Gallardo-orange\">";
+    }
+    if ($_POST['post_id_car'] == 6) {
+        echo "<header class=\"header header__mazda-6\">";
+    }
+    if ($_POST['post_id_car'] == 7) {
+        echo "<header class=\"header header__mazda-cx-8\">";
+    }
+    if ($_POST['post_id_car'] == 8) {
+        echo "<header class=\"header header__mazda-mx-5\">";
+    }
+    if ($_POST['post_id_car'] == 9) {
+        echo "<header class=\"header header__mercedes-benz-amg-gt-coupe\">";
+    }
+    if ($_POST['post_id_car'] == 10) {
+        echo "<header class=\"header header__mercedes-benz-cls\">";
+    }
+    if ($_POST['post_id_car'] == 11) {
+        echo "<header class=\"header header__nissan_gtr_35-blue\">";
+    }
+    if ($_POST['post_id_car'] == 12) {
+        echo "<header class=\"header header__nissan_gtr_35-orange\">";
+    }
+    if ($_POST['post_id_car'] == 13) {
+        echo "<header class=\"header header__porsche-911-carrera-s\">";
+    }
+    ?>
+    <div class="header__line">
+        <div class="header__logo">
+            <img src="../img/logo/logo.png" alt="">
+        </div>
+        <div class="header__nav">
+            <div class="header__flex-nav">
+                <div class="header__nav-block-flex">
+                    <h1><a href="../">Home</a></h1>
+                    <h1><a href="choose_car_page.php">Choose Car</a></h1>
+                </div>
+                <div class="header__nav-block-flex">
+                    <h1><a href="">Contacts</a></h1>
+                    <h1><a href="">About</a></h1>
+                </div>
             </div>
-            <div class="header__nav">
-                <div class="header__flex-nav">
-                    <div class="header__nav-block-flex">
-                        <h1><a href="../">Home</a></h1>
-                        <h1><a href="">Choose Car</a></h1>
+            <div class="header__neon"></div>
+        </div>
+        <div class="header__user" id="buttonLogIn">
+            <h1>Log<br>in</h1>
+        </div>
+    </div>
+    <div class="header__content">
+        <?php
+        if (!empty($_POST['post_id_car'])) {
+            $id_car = $_POST['post_id_car'];
+        }
+        require_once '../php/connectDataBase.php';
+        $result = $linkCarCityDataBase->query("SELECT `car`.`name`, `car`.`preview_car_page_briefly`, `car`.`preview_car_page`, `png_img`.`img_png` FROM `car` INNER JOIN `png_img` ON `car`.`id_car` = `png_img`.`id_car` and `car`.`id_car` = '$id_car';");
+        while ($carHeader = mysqli_fetch_assoc($result)) {
+            $carName = $carHeader['name'];
+            $carBriefly = $carHeader['preview_car_page_briefly'];
+            $carPreview = $carHeader['preview_car_page'];
+            $carPngImg = base64_encode($carHeader['img_png']);
+        }
+        ?>
+        <div class="header__content-flex">
+            <div class="header__content-img">
+                <div class="header__content-inner-block-img">
+                    <img src="data:image/png;base64,<? echo $carPngImg ?>" alt="errorUpImage">
+                </div>
+            </div>
+            <div class="header__content-text">
+                <div class="header__content-inner-text">
+                    <div class="header__content-inner-text-heading">
+                        <h2><? echo $carName ?></h2>
                     </div>
-                    <div class="header__nav-block-flex">
-                        <h1><a href="">Contacts</a></h1>
-                        <h1><a href="">About</a></h1>
+                    <div class="header__content-inner-text-briefly">
+                        <h3><? echo $carBriefly ?></h3>
+                    </div>
+                    <div class="header__content-inner-text-preview">
+                        <h3><? echo $carPreview ?></h3>
+                    </div>
+                    <div class="header__content-inner-text-button-book">
+                        <h3>Забронировать</h3>
                     </div>
                 </div>
-                <div class="header__neon"></div>
-            </div>
-            <div class="header__user" id="buttonLogIn">
-                <h1>Log<br>in</h1>
             </div>
         </div>
-        <!-- header_content -->
+    </div>
     </header>
+    <section class="cars-more">
+
+    </section>
     <!-- js script  -->
     <script type="text/javascript">
         //body

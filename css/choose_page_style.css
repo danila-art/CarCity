@@ -265,11 +265,12 @@
     padding-bottom: 2%;
 }
 
-.car-flex__text-content-show-more {
+.car-flex__text-content-show-more input[type=submit]{
     display: block;
+    background-color: inherit;
     width: 60%;
     height: auto;
-    /* padding: .5%; */
+    padding: 1%;
     text-align: center;
     border: 2px solid #9BFEF9;
     border-radius: 20px;
@@ -291,7 +292,7 @@
     transition: .5s ease-in-out;
 }
 
-.car-flex__text-content-show-more:hover, .car-flex__text-content-book:hover {
+.car-flex__text-content-show-more input[type=submit]:hover, .car-flex__text-content-book:hover {
     box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
     filter: drop-shadow(0px 0px 15px #91EBFE);
     transition: .5s;
