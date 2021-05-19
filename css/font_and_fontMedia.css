@@ -2,6 +2,7 @@
 !здесь находится медиа для header and footer использовать на 
 !всех страницах.
 */
+
 @font-face {
     font-family: "Hemicube_Type";
     src: url('../font/hemicube-bold/HemicubeType_PERSONAL_USE_ONLY.ttf');
@@ -37,10 +38,12 @@ h3 {
     font-style: normal;
     font-weight: 400;
 }
-a{
+
+a {
     text-decoration: none;
     color: inherit;
 }
+
 label {
     font-family: Rafale, serif;
     color: white;
@@ -180,5 +183,165 @@ span {
     }
     .blue-link {
         font-size: 14px;
+    }
+    /* block-registration-autorization */
+    .block-registration__heading {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .block-autorization__heading {
+        font-size: 22px;
+        line-height: 22px;
+    }
+    .block-registration__check-box h3 {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .blue-link {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width: 1920px) {
+    h1 {
+        line-height: 42px;
+    }
+    h2 {
+        line-height: 42px;
+    }
+    h3 {
+        line-height: 42px;
+    }
+    .header h1 {
+        font-size: 36px;
+    }
+    .header__h2 {
+        padding-left: 12%;
+    }
+    .header__h2 h2 {
+        font-size: 38px;
+    }
+    .header__content-text-h3 h3 {
+        font-size: 28px;
+    }
+    .header__content-button h3 {
+        font-size: 28px;
+    }
+    .advantages__heading-mixed h2, .advantages__heading-mixed h1 {
+        font-size: 32px;
+    }
+    .new-model__heading h3, .new-model__heading h2 {
+        font-size: 32px;
+    }
+    .popular-cars__heading {
+        font-size: 32px;
+    }
+    .popular-cars__content-h2 h2 {
+        font-size: 36px;
+    }
+    .popular-cars__content-h3 h3 {
+        font-size: 28px;
+    }
+    .popular-cars__content-h3-right {
+        font-size: 22px;
+    }
+    .about__heading {
+        font-size: 32px;
+    }
+    .about__content-h3 {
+        font-size: 22px;
+    }
+    /* advantages-FONT-SIZE */
+    .advantageBlock1>.advantageBlock__heading {
+        font-size: 16px;
+    }
+    .advantageBlock1>.advantageBlock__content-text {
+        font-size: 14px;
+    }
+    .advantageBlock1>.advantageBlock__content-text h3 {
+        line-height: 26px;
+    }
+    .advantageBlock2>.advantageBlock__heading {
+        font-size: 16px;
+    }
+    .advantageBlock2>.advantageBlock__content-text {
+        font-size: 14px;
+    }
+    .advantageBlock2>.advantageBlock__content-text h3 {
+        line-height: 26px;
+    }
+    .advantageBlock3>.advantageBlock__heading {
+        font-size: 16px;
+    }
+    .advantageBlock3>.advantageBlock__content-text {
+        font-size: 14px;
+    }
+    .advantageBlock3>.advantageBlock__content-text h3 {
+        line-height: 26px;
+    }
+    .advantageBlock4>.advantageBlock__heading {
+        font-size: 16px;
+    }
+    .advantageBlock4>.advantageBlock__content-text {
+        font-size: 14px;
+    }
+    .advantageBlock4>.advantageBlock__content-text h3 {
+        line-height: 26px;
+    }
+    .advantageBlock5>.advantageBlock__heading {
+        font-size: 16px;
+    }
+    .advantageBlock5>.advantageBlock__content-text {
+        font-size: 14px;
+    }
+    .advantageBlock5>.advantageBlock__content-text h3 {
+        line-height: 26px;
+    }
+    .advantages__active>.advantageBlock__heading {
+        font-size: 24px;
+    }
+    .advantages__active>.advantageBlock__content-text {
+        font-size: 18px;
+    }
+    .advantages__active>.advantageBlock__content-text h3 {
+        line-height: 36px;
+    }
+    /* scrollBar */
+    body::-webkit-scrollbar {
+        width: 8px;
+        /* ширина scrollbar */
+    }
+    /* footer */
+    .footer__content-left {
+        font-size: 20px;
+    }
+    .footer__content-center {
+        font-size: 20px;
+    }
+    .footer__content-right {
+        font-size: 20px;
+    }
+    /* block-registration-autorization */
+    .block-registration__heading {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .block-autorization__heading {
+        font-size: 28px;
+        line-height: 28px;
+    }
+    .block-registration__check-box h3 {
+        font-size: 14px;
+        line-height: normal;
+    }
+    .blue-link {
+        font-size: 14px;
+    }
+    .block-autorization-and-registration label {
+        font-size: 22px;
+        line-height: 32px;
+    }
+    .block-autorization-and-registration input[type=submit]{
+        font-size: 18px;
     }
 }

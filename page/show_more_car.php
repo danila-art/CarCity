@@ -14,7 +14,7 @@
     <!--header and footer font media -->
     <link rel="stylesheet" media="screen" href="../css/font_and_fontMedia.css">
     <!-- font media this page -->
-    <!-- ------- -->
+    <link rel="stylesheet" href="../css/show_more_car_fontMedia.css">
 </head>
 
 <body>

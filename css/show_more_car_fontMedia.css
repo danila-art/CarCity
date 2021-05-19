@@ -1,0 +1,19 @@
+@media screen and (max-width: 1920px) {
+    .header__content-inner-text-heading h2 {
+        font-size: 32px;
+    }
+    .header__content-inner-text-briefly h3 {
+        font-size: 28px;
+    }
+    .header__content-inner-text-preview {
+        padding-top: 25%;
+        padding-bottom: 5%;
+    }
+    .header__content-inner-text-preview h3 {
+        font-size: 22px;
+        line-height: 42px;
+    }
+    .header__content-inner-text-button-book h3 {
+        font-size: 22px;
+    }
+}

@@ -24,3 +24,30 @@ input[type=submit] {
         font-size: 18px;
     }
 }
+
+@media screen and (max-width: 1920px) {
+    .slide-1__heading-inner {
+        font-size: 26px;
+    }
+    .filter__heading {
+        font-size: 20px;
+    }
+    .filter__select-heading h3 {
+        font-size: 18px;
+    }
+    .filter__show-button {
+        font-size: 19px;
+    }
+    .car-flex__text-content-heading h2 {
+        font-size: 34px;
+    }
+    .car-flex__text-content-h3 h3{
+        font-size: 26px;
+    }
+    .cars input[type=submit] {
+        font-size: 22px;
+    }
+    .car-flex__text-content-book h3 {
+        font-size: 22px;
+    }
+}

@@ -17,9 +17,11 @@
     cursor: pointer;
     transition: .3s ease-in-out;
 }
-input[type=text]::placeholder, input[type=password]::placeholder{
+
+input[type=text]::placeholder, input[type=password]::placeholder {
     color: rgb(255, 82, 82);
 }
+
 .block__close:hover {
     transform: scale(1.1);
     transition: .3s ease-in-out;
