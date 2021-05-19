@@ -17,3 +17,23 @@
         font-size: 22px;
     }
 }
+
+@media screen and (max-width: 1366px) {
+    .header__content-inner-text-heading h2 {
+        font-size: 28px;
+    }
+    .header__content-inner-text-briefly h3 {
+        font-size: 20px;
+    }
+    .header__content-inner-text-preview {
+        padding-top: 15%;
+        padding-bottom: 5%;
+    }
+    .header__content-inner-text-preview h3 {
+        font-size: 18px;
+        line-height: 28px;
+    }
+    .header__content-inner-text-button-book h3 {
+        font-size: 18px;
+    }
+}

@@ -7,24 +7,6 @@ input[type=submit] {
     font-weight: 400;
 }
 
-@media screen and (max-width: 1366px) {
-    .slide-1__heading-inner {
-        font-size: 22px;
-    }
-    .filter__select-heading h3 {
-        font-size: 16px;
-    }
-    .car-flex__text-content-heading h2 {
-        font-size: 32px;
-    }
-    .cars input[type=submit] {
-        font-size: 18px;
-    }
-    .car-flex__text-content-book h3 {
-        font-size: 18px;
-    }
-}
-
 @media screen and (max-width: 1920px) {
     .slide-1__heading-inner {
         font-size: 26px;
@@ -41,7 +23,7 @@ input[type=submit] {
     .car-flex__text-content-heading h2 {
         font-size: 34px;
     }
-    .car-flex__text-content-h3 h3{
+    .car-flex__text-content-h3 h3 {
         font-size: 26px;
     }
     .cars input[type=submit] {
@@ -49,5 +31,23 @@ input[type=submit] {
     }
     .car-flex__text-content-book h3 {
         font-size: 22px;
+    }
+}
+
+@media screen and (max-width: 1366px) {
+    .slide-1__heading-inner {
+        font-size: 22px;
+    }
+    .filter__select-heading h3 {
+        font-size: 16px;
+    }
+    .car-flex__text-content-heading h2 {
+        font-size: 32px;
+    }
+    .cars input[type=submit] {
+        font-size: 18px;
+    }
+    .car-flex__text-content-book h3 {
+        font-size: 18px;
     }
 }
