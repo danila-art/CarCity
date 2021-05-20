@@ -260,15 +260,15 @@
 
         });
         //authUser
-        const userActive = document.getElementById('userAuth');
-        const userInner = document.getElementById('userInner');
-        userActive.addEventListener('click', () => {
+        const headerLineUserActive = document.getElementById('userAuth');
+        const headerLineUserInner = document.getElementById('userInner');
+        headerLineUserActive.addEventListener('click', () => {
             if (headerLineUserActive.getAttribute("data-active") == 0) {
-                userActive.dataset.active = 1;
-                userInner.style.display = 'flex';
+                headerLineUserActive.dataset.active = 1;
+                headerLineUserInner.style.display = 'flex';
             } else {
-                userActive.dataset.active = 0;
-                userInner.style.display = 'none';
+                headerLineUserActive.dataset.active = 0;
+                headerLineUserInner.style.display = 'none';
             }
         });
     </script>
