@@ -126,16 +126,25 @@
                 <div class="header__neon"></div>
             </div>
             <?php
-                if (!empty($_COOKIE['loginUser'])) {
-                    echo "Пользователь есть";
-                } else {
-                    echo "<div class=\"header__user\" id=\"buttonLogIn\">
+            if (!empty($_COOKIE['loginUser'])) {
+                echo "<div class=\"block-user\">
+                        <div class=\"auth_user\" id=\"userAuth\"  data-active = \"0\">
+                            <img src=\"img/icons/user-blue.png\" alt=\"errorUpImage\">
+                            <h3>{$_COOKIE['loginUser']}</h3>
+                        </div>
+                    </div>
+                    <div class=\"block-inner\" id=\"userInner\">
+                        <div class=\"block-inner-1\"><h3>История заказов</h3></div>
+                        <div class=\"block-inner-2\"><h3>Мой профиль</h3></div>
+                        <div class=\"block-inner-3\"><h3>Выйти</h3></div>
+                    </div>
+                ";
+            } else {
+                echo "<div class=\"header__user\" id=\"buttonLogIn\">
                             <h1>Log<br>in</h1>
                         </div>";
-                }
-                
+            }
             ?>
-
         </div>
         <div class="header__content">
             <div class="header__content-flex">
@@ -414,6 +423,18 @@
                 element.style.width = widthProgressLine + '%';
             });
 
+        });
+        //authUser
+        const headerLineUserActive = document.getElementById('userAuth');
+        const headerLineUserInner = document.getElementById('userInner');
+        headerLineUserActive.addEventListener('click', () => {
+            if (headerLineUserActive.getAttribute("data-active") == 0) {
+                headerLineUserActive.dataset.active = 1;
+                headerLineUserInner.style.display = 'flex';
+            } else {
+                headerLineUserActive.dataset.active = 0;
+                headerLineUserInner.style.display = 'none';
+            }
         });
     </script>
     <script src="js/main_script.js"></script>

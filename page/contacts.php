@@ -127,9 +127,26 @@
                 </div>
                 <div class="header__neon"></div>
             </div>
-            <div class="header__user" id="buttonLogIn">
-                <h1>Log<br>in</h1>
-            </div>
+            <?php
+            if (!empty($_COOKIE['loginUser'])) {
+                echo "<div class=\"block-user\">
+                        <div class=\"auth_user\" id=\"userAuth\" data-active = \"0\">
+                            <img src=\"../img/icons/user-blue.png\" alt=\"errorUpImage\">
+                            <h3>{$_COOKIE['loginUser']}</h3>
+                        </div>
+                    </div>
+                    <div class=\"block-inner\" id=\"userInner\">
+                        <div class=\"block-inner-1\"><h3>История заказов</h3></div>
+                        <div class=\"block-inner-2\"><h3>Мой профиль</h3></div>
+                        <div class=\"block-inner-3\"><h3>Выйти</h3></div>
+                    </div>
+                ";
+            } else {
+                echo "<div class=\"header__user\" id=\"buttonLogIn\">
+                            <h1>Log<br>in</h1>
+                        </div>";
+            }
+            ?>
         </div>
         <!-- header_content -->
     </header>
@@ -158,6 +175,18 @@
                 element.style.width = widthProgressLine + '%';
             });
 
+        });
+        //authUser
+        const userActive = document.getElementById('userAuth');
+        const userInner = document.getElementById('userInner');
+        userActive.addEventListener('click', () => {
+            if (headerLineUserActive.getAttribute("data-active") == 0) {
+                userActive.dataset.active = 1;
+                userInner.style.display = 'flex';
+            } else {
+                userActive.dataset.active = 0;
+                userInner.style.display = 'none';
+            }
         });
     </script>
     <script src="../js/script_registration_and_autorization.js"></script>
