@@ -29,6 +29,9 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
 </head>
 
 <body>
+    <div class="mk-spinner-wrap">
+        <div class="mk-spinner-ring"></div>
+    </div>
     <section class="block-autorization-and-registration" id="moduleBlockRegAuto">
         <div class="block-registration" id="blockRegistration">
             <!-- box-animate -->
@@ -419,6 +422,13 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
             </div>
         </div>
     </footer>
+    <script>
+        window.onload = function() {
+            window.setTimeout(function() {
+                document.querySelector('.mk-spinner-wrap').style.display = 'none';
+            }, 1000);
+        }
+    </script>
     <!-- js script  -->
     <script type="text/javascript">
         //body

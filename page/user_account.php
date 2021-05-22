@@ -28,6 +28,9 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
 </head>
 
 <body>
+    <div class="mk-spinner-wrap">
+        <div class="mk-spinner-ring"></div>
+    </div>
     <!-- header -->
     <header class="header">
         <div class="header__line">
@@ -99,6 +102,13 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
         </div>
     </header>
     <!-- js script  -->
+    <script>
+        window.onload = function() {
+            window.setTimeout(function() {
+                document.querySelector('.mk-spinner-wrap').style.display = 'none';
+            }, 1000);
+        }
+    </script>
     <script type="text/javascript">
         //body
         let elementBody = document.querySelector('body');
