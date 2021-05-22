@@ -16,6 +16,37 @@
     .header__content-inner-text-button-book h3 {
         font-size: 22px;
     }
+    /* car -> exterior */
+    .cars-more__exterior-car-heading h3 {
+        font-size: 32px;
+    }
+    .cars-more__exterior-car-text h3 {
+        font-size: 24px;
+    }
+    /* car -> interior */
+    .cars-more__interior-car-heading h3 {
+        font-size: 32px;
+    }
+    .cars-more__inerior-car-text h3 {
+        font-size: 24px;
+    }
+    /* car -> technical */
+    .cars-more__technical-specifications-heading h3 {
+        font-size: 32px;
+    }
+    .cars-more__technical-specifications-text-box h3 {
+        font-size: 24px;
+    }
+    /* car -> price */
+    .price__heading h3 {
+        font-size: 32px;
+    }
+    .price__price-box h3 {
+        font-size: 24px;
+    }
+    .price__button-book h3 {
+        font-size: 24px;
+    }
 }
 
 @media screen and (max-width: 1366px) {
@@ -34,6 +65,37 @@
         line-height: 28px;
     }
     .header__content-inner-text-button-book h3 {
+        font-size: 18px;
+    }
+    /* car -> exterior */
+    .cars-more__exterior-car-heading h3 {
+        font-size: 28px;
+    }
+    .cars-more__exterior-car-text h3 {
+        font-size: 18px;
+    }
+    /* car -> interior */
+    .cars-more__interior-car-heading h3 {
+        font-size: 28px;
+    }
+    .cars-more__inerior-car-text h3 {
+        font-size: 18px;
+    }
+    /* car -> technical */
+    .cars-more__technical-specifications-heading h3 {
+        font-size: 28px;
+    }
+    .cars-more__technical-specifications-text-box h3 {
+        font-size: 18px;
+    }
+    /* car -> price */
+    .price__heading h3 {
+        font-size: 28px;
+    }
+    .price__price-box h3 {
+        font-size: 18px;
+    }
+    .price__button-book h3 {
         font-size: 18px;
     }
 }

@@ -146,3 +146,268 @@
     width: 100%;
     height: auto;
 }
+
+.cars-more {
+    display: block;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(10, 10, 10, 0.3);
+    width: 100%;
+    height: auto;
+}
+
+.cars-more__exterior-car {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.cars-more__exterior-car-heading {
+    display: block;
+    width: 100%;
+    text-align: left
+}
+
+.cars-more__exterior-car-heading h3 {
+    color: #91EBFE;
+    text-shadow: 0px 0px 5px #91EBFE;
+}
+
+.cars-more__interior-car {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.cars-more__interior-car-heading {
+    display: block;
+    width: 100%;
+    text-align: right;
+}
+
+.cars-more__interior-car-heading h3 {
+    color: #91EBFE;
+    text-shadow: 0px 0px 5px #91EBFE;
+}
+
+.cars-more__technical-specifications {
+    display: block;
+    background-color: rgba(10, 10, 10, 0.7);
+    width: 100%;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.cars-more__technical-specifications-container {
+    display: block;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.cars-more__technical-specifications-heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.cars-more__technical-specifications-heading h3 {
+    color: #91EBFE;
+    text-shadow: 0px 0px 5px #91EBFE;
+}
+
+.cars-more__exterior-car-text {
+    padding-left: 4%;
+    text-align: left;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.cars-more__inerior-car-text {
+    padding-right: 4%;
+    text-align: right;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.cars-more__exterior-car-img-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 88vh;
+}
+
+.cars-more__exterior-car-img-block {
+    display: block;
+    width: 13%;
+    height: auto;
+    padding: 1%;
+}
+
+.cars-more__exterior-car-img-block:nth-child(1) {
+    display: block;
+    width: 70%;
+    height: inherit;
+}
+
+.cars-more__exterior-car-img-block:nth-child(1) img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cars-more__exterior-car-img-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cars-more__interior-car-img-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%;
+    height: 88vh;
+}
+
+.cars-more__interior-car-img-block {
+    display: block;
+    width: 17%;
+    height: auto;
+    padding: 1%;
+}
+
+.cars-more__interior-car-img-block:nth-child(1) {
+    display: block;
+    width: 70%;
+    height: inherit;
+}
+
+.cars-more__interior-car-img-block:nth-child(1) img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.cars-more__interior-car-img-block img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.cars-more__technical-specifications-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+    padding-top: 2%;
+}
+
+.cars-more__technical-specifications-text-content {
+    display: block;
+    width: 40%;
+    height: auto;
+}
+
+.cars-more__technical-specifications-text-box {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.cars-more__technical-specifications-text-box-h3-1 {
+    width: 70%;
+}
+
+.cars-more__technical-specifications-text-box-h3-2 {
+    width: 30%;
+}
+
+.cars-more__technical-specifications-img-box {
+    display: flex;
+    width: 50%;
+    height: auto;
+    align-items: center;
+}
+
+.cars-more__technical-specifications-img-box img {
+    width: 100%;
+    height: auto;
+}
+
+.price {
+    display: block;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(10, 10, 10, 0.3);
+    width: 100%;
+    height: auto;
+    padding-bottom: 3%;
+}
+
+.price__heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.price__heading h3 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #91EBFE;
+    text-shadow: 0px 0px 5px #91EBFE;
+}
+
+.price__price-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.price__price-box {
+    text-align: center;
+}
+
+.price__button-book {
+    display: block;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    cursor: pointer;
+    margin: 0 auto;
+    transition: .3s ease-in-out;
+}
+
+.price__button-book:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 25px #91EBFE);
+    transition: .3s ease-in-out;
+}

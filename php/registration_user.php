@@ -1,34 +1,34 @@
 <?php
 // $linkCarCityDataBase <-переменная базы данных
 require_once './connectDataBase.php';
-if(!empty($_POST['surname'])){
+if (!empty($_POST['surname'])) {
     $surname = $_POST['surname'];
-}else{
+} else {
     $surname = null;
 }
-if(!empty($_POST['name'])){
+if (!empty($_POST['name'])) {
     $name = $_POST['name'];
-}else{
+} else {
     $name = null;
 }
-if(!empty($_POST['patronymic'])){
+if (!empty($_POST['patronymic'])) {
     $patronymic = $_POST['patronymic'];
-}else{
+} else {
     $patronymic = null;
 }
-if(!empty($_POST['login'])){
+if (!empty($_POST['login'])) {
     $login = $_POST['login'];
-}else{
+} else {
     $login = null;
 }
-if(!empty($_POST['password'])){
+if (!empty($_POST['password'])) {
     $password = $_POST['password'];
-}else{
+} else {
     $password = null;
 }
-if(!empty($_POST['repeatPassword'])){
+if (!empty($_POST['repeatPassword'])) {
     $repeatPassword = $_POST['repeatPassword'];
-}else{
+} else {
     $repeatPassword = null;
 }
 if ($password == $repeatPassword) {
@@ -41,9 +41,15 @@ if ($surname != null && $name != null && $patronymic != null && $login != null &
     $countUser = mysqli_num_rows($ifUser);
     if ($countUser != 0) {
         echo "Пользователь с таким логином уже существует!"; //Придумать красивый вывод
-    }else{
+    } else {
         $linkCarCityDataBase->query("INSERT INTO `user` (`name`, `surname`, `patronymic`, `login`, `password`) VALUES ('$surname','$name','$patronymic','$login','$password')");
-        
+        $thisResult = $linkCarCityDataBase->query("SELECT * FROM `user` WHERE `login` = '$login'");
+        while ($thisUser = mysqli_fetch_assoc($thisResult)) {
+            $id_user = $thisUser['id_user'];
+        }
+        $linkCarCityDataBase->query("INSERT INTO `driver_license` (`id_user`) VALUES ('$id_user')");
+        $linkCarCityDataBase->query("INSERT INTO `img_user` (`id_user`) VALUES ('$id_user')");
+        $linkCarCityDataBase->query("INSERT INTO `passport_user` (`id_user`) VALUES ('$id_user')");
     }
 }
 // !Провести тест!

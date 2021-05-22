@@ -12,6 +12,7 @@
     <link rel="stylesheet" href="../css/style_autorization_registration.css">
     <!--header and footer font media -->
     <link rel="stylesheet" media="screen" href="../css/font_and_fontMedia.css">
+    <link rel="stylesheet" media="screen" href="../css/media_block_style.css">
 </head>
 
 <body>
@@ -138,7 +139,7 @@
                     <div class=\"block-inner\" id=\"userInner\">
                         <div class=\"block-inner-1\"><h3>История заказов</h3></div>
                         <div class=\"block-inner-2\"><h3>Мой профиль</h3></div>
-                        <div class=\"block-inner-3\"><h3>Выйти</h3></div>
+                        <div class=\"block-inner-3\"><h3><a href=\"../php/exit_user.php\">Выйти</a></h3></div>
                     </div>
                 ";
             } else {

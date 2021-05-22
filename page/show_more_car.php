@@ -1,3 +1,13 @@
+<?php
+require_once '../php/connectDataBase.php';
+if (!empty($_POST['post_id_car'])) {
+    $id_car = $_POST['post_id_car'];
+}
+$carResult = $linkCarCityDataBase->query("SELECT * FROM `car` WHERE `id_car` = '$id_car'");
+while ($carOut = mysqli_fetch_assoc($carResult)) {
+    $nameCar = $carOut['name'];
+}
+?>
 <!-- Страница -> узнать больше о оределенной машине -->
 <!DOCTYPE html>
 <html lang="en">
@@ -6,7 +16,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Car City - Ваш Аккаунт</title>
+    <title>Car City - <? echo $nameCar ?></title>
     <!-- header and footer style-->
     <link rel="stylesheet" href="../css/main_style.css">
     <link rel="stylesheet" href="../css/style_autorization_registration.css">
@@ -15,6 +25,7 @@
     <link rel="stylesheet" media="screen" href="../css/font_and_fontMedia.css">
     <!-- font media this page -->
     <link rel="stylesheet" href="../css/show_more_car_fontMedia.css">
+    <link rel="stylesheet" media="screen" href="../css/media_block_style.css">
 </head>
 
 <body>
@@ -181,7 +192,7 @@
                     <div class=\"block-inner\" id=\"userInner\">
                         <div class=\"block-inner-1\"><h3>История заказов</h3></div>
                         <div class=\"block-inner-2\"><h3>Мой профиль</h3></div>
-                        <div class=\"block-inner-3\"><h3>Выйти</h3></div>
+                        <div class=\"block-inner-3\"><h3><a href=\"../php/exit_user.php\">Выйти</a></h3></div>
                     </div>
                 ";
         } else {
@@ -193,10 +204,6 @@
     </div>
     <div class="header__content">
         <?php
-        if (!empty($_POST['post_id_car'])) {
-            $id_car = $_POST['post_id_car'];
-        }
-        require_once '../php/connectDataBase.php';
         $result = $linkCarCityDataBase->query("SELECT `car`.`name`, `car`.`preview_car_page_briefly`, `car`.`preview_car_page`, `png_img`.`img_png` FROM `car` INNER JOIN `png_img` ON `car`.`id_car` = `png_img`.`id_car` and `car`.`id_car` = '$id_car';");
         while ($carHeader = mysqli_fetch_assoc($result)) {
             $carName = $carHeader['name'];
@@ -231,8 +238,187 @@
     </div>
     </header>
     <section class="cars-more">
-
+        <div class="cars-more__exterior-car">
+            <?php
+            $resultExterior = $linkCarCityDataBase->query("SELECT `car`.`information_exterior` FROM `car` WHERE `car`.`id_car` = '$id_car'");
+            while ($text = mysqli_fetch_assoc($resultExterior)) {
+                $textExterior = $text['information_exterior'];
+            }
+            ?>
+            <div class="cars-more__exterior-car-heading">
+                <h3>Экстерьер</h3>
+            </div>
+            <div class="cars-more__exterior-car-text">
+                <h3><? echo $textExterior ?></h3>
+            </div>
+            <div class="cars-more__exterior-car-img-container">
+                <?php
+                $resultExteriorImg = $linkCarCityDataBase->query("SELECT `exterior_img`.`exterior_img_tmp` FROM `car` INNER JOIN `exterior_img` ON `car`.`id_car` = `exterior_img`.`id_car` AND `car`.`id_car` = '$id_car';");
+                while ($exteriorImg = mysqli_fetch_assoc($resultExteriorImg)) {
+                    $exteriorImgBase64 = base64_encode($exteriorImg['exterior_img_tmp']);
+                    echo "<div class=\"cars-more__exterior-car-img-block\" data-active = \"0\">
+                                <img src=\"data:image/jpeg;base64,$exteriorImgBase64\" alt=\"errorUpimage\">
+                        </div>";
+                }
+                ?>
+            </div>
+        </div>
+        <div class="cars-more__interior-car">
+            <?php
+            $resultInterior = $linkCarCityDataBase->query("SELECT `car`.`information_interior` FROM `car` WHERE `car`.`id_car` = '$id_car'");
+            while ($text = mysqli_fetch_assoc($resultInterior)) {
+                $textInterior = $text['information_interior'];
+            }
+            ?>
+            <div class="cars-more__interior-car-heading">
+                <h3>Интерьер</h3>
+            </div>
+            <div class="cars-more__inerior-car-text">
+                <h3><? echo $textInterior ?></h3>
+            </div>
+            <div class="cars-more__interior-car-img-container">
+                <?php
+                $resultInteriorImg = $linkCarCityDataBase->query("SELECT `interior_img`.`interior_img_tmp` FROM `car` INNER JOIN `interior_img` ON `car`.`id_car` = `interior_img`.`id_car` AND `car`.`id_car` = '$id_car'");
+                while ($interiorImg = mysqli_fetch_assoc($resultInteriorImg)) {
+                    $interiorImgBase64 = base64_encode($interiorImg['interior_img_tmp']);
+                    echo "<div class=\"cars-more__interior-car-img-block\" data-active = \"0\">
+                                <img src=\"data:image/jpeg;base64,$interiorImgBase64\" alt=\"errorUpimage\">
+                        </div>";
+                }
+                ?>
+            </div>
+        </div>
+        <div class="cars-more__technical-specifications">
+            <div class="cars-more__technical-specifications-container">
+                <div class="cars-more__technical-specifications-heading">
+                    <h3>Технические характеристики</h3>
+                </div>
+            </div>
+            <?php
+            $resultTechnical = $linkCarCityDataBase->query("SELECT `technical_specifications`.`volume`, `technical_specifications`.`fuel`, `technical_specifications`.`power_output`, `technical_specifications`.`drive`, `technical_specifications`.`transmition`, `technical_specifications`.`engine_type`, `technical_specifications`.`expenditure`, `png_img`.`img_png` FROM `car` INNER JOIN `technical_specifications` ON `car`.`id_car` = `technical_specifications`.`id_car` INNER JOIN `png_img` ON `car`.`id_car` = `png_img`.`id_car` AND `car`.`id_car` = '$id_car';");
+            while ($technicalOupPut = mysqli_fetch_assoc($resultTechnical)) {
+                $volume = $technicalOupPut['volume'];
+                $fuel = $technicalOupPut['fuel'];
+                $power_output = $technicalOupPut['power_output'];
+                $drive = $technicalOupPut['drive'];
+                $transmission = $technicalOupPut['transmition'];
+                $engine_type = $technicalOupPut['engine_type'];
+                $expenditure = $technicalOupPut['expenditure'];
+                $pngTechImg = base64_encode($technicalOupPut['img_png']);
+            }
+            ?>
+            <div class="cars-more__technical-specifications-flex">
+                <div class="cars-more__technical-specifications-text-content">
+                    <div class="cars-more__technical-specifications-text-box">
+                        <h3 class="cars-more__technical-specifications-text-box-h3-1">Объём:</h3>
+                        <h3 class="cars-more__technical-specifications-text-box-h3-2"><? echo $volume; ?></h3>
+                    </div>
+                    <div class="cars-more__technical-specifications-text-box">
+                        <h3 class="cars-more__technical-specifications-text-box-h3-1">Топливо:</h3>
+                        <h3 class="cars-more__technical-specifications-text-box-h3-2"><? echo $fuel; ?></h3>
+                    </div>
+                    <div class="cars-more__technical-specifications-text-box">
+                        <h3 class="cars-more__technical-specifications-text-box-h3-1">Мощность:</h3>
+                        <h3 class="cars-more__technical-specifications-text-box-h3-2"><? echo $power_output; ?></h3>
+                    </div>
+                    <div class="cars-more__technical-specifications-text-box">
+                        <h3 class="cars-more__technical-specifications-text-box-h3-1">Привод:</h3>
+                        <h3 class="cars-more__technical-specifications-text-box-h3-2"><? echo $drive; ?></h3>
+                    </div>
+                    <div class="cars-more__technical-specifications-text-box">
+                        <h3 class="cars-more__technical-specifications-text-box-h3-1">Коробка:</h3>
+                        <h3 class="cars-more__technical-specifications-text-box-h3-2"><? echo $transmission; ?></h3>
+                    </div>
+                    <div class="cars-more__technical-specifications-text-box">
+                        <h3 class="cars-more__technical-specifications-text-box-h3-1">Тип двигателя:</h3>
+                        <h3 class="cars-more__technical-specifications-text-box-h3-2"><? echo $engine_type; ?></h3>
+                    </div>
+                    <div class="cars-more__technical-specifications-text-box">
+                        <h3 class="cars-more__technical-specifications-text-box-h3-1">Расход</h3>
+                        <h3 class="cars-more__technical-specifications-text-box-h3-2"><? echo $expenditure; ?></h3>
+                    </div>
+                </div>
+                <div class="cars-more__technical-specifications-img-box">
+                    <?php
+                    echo "<img src=\"data:image/png;base64, {$pngTechImg}\" alt=\"errorUpImage\">";
+                    ?>
+                </div>
+            </div>
+        </div>
     </section>
+    <section class="price">
+        <div class="price__heading">
+            <h3>Цены</h3>
+        </div>
+        <div class="price__price-flex">
+            <div class="price__price-box">
+                <h3>1 час:</h3>
+                <h3></h3>
+            </div>
+            <div class="price__price-box">
+                <h3>1-2 суток:</h3>
+                <h3></h3>
+            </div>
+            <div class="price__price-box">
+                <h3>3-6 суток:</h3>
+                <h3></h3>
+            </div>
+            <div class="price__price-box">
+                <h3>7-14 суток:</h3>
+                <h3></h3>
+            </div>
+            <div class="price__price-box">
+                <h3>15-30 суток</h3>
+                <h3></h3>
+            </div>
+        </div>
+        <div class="price__button-book">
+            <h3>Забронировать</h3>
+        </div>
+    </section>
+    <footer class="footer">
+        <div class="footer__logo-animate">
+            <div class="footer__neon-left-shell">
+                <div class="footer__neon-left footer-neon"></div>
+            </div>
+            <div class="footer__logo-img">
+                <img src="../img/logo/logo.png" alt="errorUpImage">
+            </div>
+            <div class="footer__neon-right-shell">
+                <div class="footer__neon-right footer-neon"></div>
+            </div>
+        </div>
+        <div class="footer__flex">
+            <div class="footer__content-left">
+                <div class="footer__social-heading">
+                    <h3>Мы в соц сетях:</h3>
+                </div>
+                <div class="footer__flex-social">
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/facebook.png" alt="errorUpImage">
+                    </div>
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/instagram.png" alt="errorUpImage">
+                    </div>
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/twitter.png" alt="errorUpImage">
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer__content-center">
+                <h3>О нас</h3>
+                <h3>Контакты</h3>
+                <h3>Карта сайта</h3>
+                <h3>Выбрать авто</h3>
+            </div>
+            <div class="footer__content-right">
+                <h3>Политика конфидициальности</h3>
+                <h3>Обработка персональных данных</h3>
+                <h3>Условия аренды</h3>
+            </div>
+        </div>
+    </footer>
     <!-- js script  -->
     <script type="text/javascript">
         //body
@@ -272,6 +458,7 @@
             }
         });
     </script>
+    <script src="../js/show-more_car_script.js"></script>
     <script src="../js/script_registration_and_autorization.js"></script>
 </body>
 
