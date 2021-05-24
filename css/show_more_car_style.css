@@ -250,14 +250,14 @@
 
 .cars-more__exterior-car-img-block {
     display: block;
-    width: 13%;
+    width: 14%;
     height: auto;
     padding: 1%;
 }
 
 .cars-more__exterior-car-img-block:nth-child(1) {
     display: block;
-    width: 70%;
+    width: 75%;
     height: inherit;
 }
 
@@ -266,6 +266,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 3px 7px 20px 0px #00000094;
+    animation: opacityAnimation 1s ease-in-out;
 }
 
 .cars-more__exterior-car-img-block img {
@@ -273,6 +275,7 @@
     height: auto;
     border-radius: 10px;
     cursor: pointer;
+    animation: opacityAnimation 1s ease-in-out;
 }
 
 .cars-more__interior-car-img-container {
@@ -285,14 +288,14 @@
 
 .cars-more__interior-car-img-block {
     display: block;
-    width: 17%;
+    width: 19%;
     height: auto;
     padding: 1%;
 }
 
 .cars-more__interior-car-img-block:nth-child(1) {
     display: block;
-    width: 70%;
+    width: 75%;
     height: inherit;
 }
 
@@ -301,6 +304,8 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+    box-shadow: 3px 7px 20px 0px #00000094;
+    animation: opacityAnimation 1s ease-in-out;
 }
 
 .cars-more__interior-car-img-block img {
@@ -308,6 +313,16 @@
     height: auto;
     border-radius: 10px;
     cursor: pointer;
+    animation: opacityAnimation 1s ease-in-out;
+}
+
+@keyframes opacityAnimation {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
 
 .cars-more__technical-specifications-flex {

@@ -18,6 +18,7 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car City - <? echo $nameCar ?></title>
     <!-- header and footer style-->
+    <link rel="shortcut icon" href="../img/logo/logo.png">
     <link rel="stylesheet" href="../css/main_style.css">
     <link rel="stylesheet" href="../css/style_autorization_registration.css">
     <link rel="stylesheet" href="../css/show_more_car_style.css">
@@ -194,7 +195,7 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
                     </div>
                     <div class=\"block-inner\" id=\"userInner\">
                         <div class=\"block-inner-1\"><h3>История заказов</h3></div>
-                        <div class=\"block-inner-2\"><h3>Мой профиль</h3></div>
+                        <div class=\"block-inner-2\"><h3><a href=\"../page/user_account.php\">Мой профиль</a></h3></div>
                         <div class=\"block-inner-3\"><h3><a href=\"../php/exit_user.php\">Выйти</a></h3></div>
                     </div>
                 ";

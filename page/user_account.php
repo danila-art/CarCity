@@ -11,7 +11,7 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
 ?>
 <!-- Страница -> аккаунт пользователя -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 
 <head>
     <meta charset="UTF-8">
@@ -19,18 +19,130 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Car City - <? echo $loginUser ?></title>
     <!-- header and footer style-->
+    <link rel="shortcut icon" href="../img/logo/logo.png">
     <link rel="stylesheet" href="../css/main_style.css">
     <link rel="stylesheet" href="../css/style_autorization_registration.css">
+    <link rel="stylesheet" href="../css/user_style.css">
     <!--header and footer font media -->
     <link rel="stylesheet" media="screen" href="../css/font_and_fontMedia.css">
     <link rel="stylesheet" media="screen" href="../css/media_block_style.css">
     <!-- font media this page -->
+    <link rel="stylesheet" media="screen" href="../css/user_font_media.css">
 </head>
 
 <body>
     <div class="mk-spinner-wrap">
         <div class="mk-spinner-ring"></div>
     </div>
+    <section class="background-module" id="moduleAddData">
+        <div class="background-module__add-img-user" id="moduleAddImg">
+            <!-- box-animate -->
+            <div class="block-animate__bar block-animate__top"></div>
+            <div class="block-animate__bar block-animate__right block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__bottom block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__left"></div>
+            <div class="background-module__heading">
+                <h3>Добавьте свое фото</h3>
+            </div>
+            <div class="background-module__close-block">
+                <img src="../img/icons/cancel-white.png" alt="errorUpImage">
+            </div>
+            <form action="" method="post" id="form-add-img" enctype="multipart/form-data">
+                <div class="background-module__input-box">
+                    <div class="input__wrapper">
+                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                        <label for="input__file" class="input__file-button">
+                            <span class="input__file-icon-wrapper"><img class="input__file-icon" src="../img/icons/upload.png" alt="Выбрать файл" width="25"></span>
+                            <span class="input__file-button-text">Выберите файл</span>
+                        </label>
+                    </div>
+                </div>
+                <div class="background-module__submit-box">
+                    <input type="submit" value="Добавить">
+                </div>
+            </form>
+        </div>
+        <div class="background-module__add-pasport" id="moduleAddPasport">
+            <!-- box-animate -->
+            <div class="block-animate__bar block-animate__top"></div>
+            <div class="block-animate__bar block-animate__right block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__bottom block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__left"></div>
+            <div class="background-module__heading">
+                <h3>Добавьте паспортные данные</h3>
+            </div>
+            <div class="background-module__close-block">
+                <img src="../img/icons/cancel-white.png" alt="errorUpImage">
+            </div>
+            <form action="" method="post" id="form-add-pasport">
+                <div class="input-add__flex-box">
+                    <div class="background-module__input-box">
+                        <label for="userPasport_number">Номер паспорта</label>
+                        <input class="input-add" type="text" name="userPasport_number">
+                    </div>
+                    <div class="background-module__input-box">
+                        <label for="userPasport_series">Серия паспорта</label>
+                        <input class="input-add" type="text" name="userPasport_series">
+                    </div>
+                </div>
+                <div class="background-module__input-box">
+                    <label for="userDate_of_birth">Дата рождения</label>
+                    <input class="input-add" type="date" name="userDate_of_birth">
+                </div>
+                <div class="background-module__input-box">
+                    <div class="input-add__flex">
+                        <div class="input-add__gender">
+                            <input type="radio" value="Мужской" name="input-gender">
+                            <label for="input-gender">Мужской</label>
+                        </div>
+                        <div class="input-add__gender">
+                            <input type="radio" value="Женский" name="input-gender">
+                            <label for="input-gender">Женский</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="background-module__submit-box">
+                    <input type="submit" value="Добавить">
+                </div>
+            </form>
+        </div>
+        <div class="background-module__add-driver" id="moduleAddDriver">
+            <!-- box-animate -->
+            <div class="block-animate__bar block-animate__top"></div>
+            <div class="block-animate__bar block-animate__right block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__bottom block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__left"></div>
+            <div class="background-module__heading">
+                <h3>Добавьте водительское удостоверение</h3>
+            </div>
+            <div class="background-module__close-block">
+                <img src="../img/icons/cancel-white.png" alt="errorUpImage">
+            </div>
+            <form action="" method="post" id="form-add-driver">
+                <div class="input-add__flex">
+                    <div class="background-module__input-box">
+                        <div class="input-add__box">
+                            <label for="userDriver_license_number">Номер удостоверения</label>
+                            <input class="input-add" type="text" name="userDriver_license_number">
+                        </div>
+                    </div>
+                    <div class="background-module__input-box">
+                        <div class="input-add__box">
+                            <label for="userDriver_license_series">Серия удостоверения</label>
+                            <input class="input-add" type="text" name="userDriver_license_series">
+                        </div>
+                    </div>
+                </div>
+                <div class="background-module__input-box">
+                    <label for="userDate_of_issue">Дата выдачи</label>
+                    <input class="input-add" type="date" name="userDate_of_issue">
+                </div>
+                <div class="background-module__submit-box">
+                    <input type="submit" value="Добавить">
+                </div>
+            </form>
+        </div>
+    </section>
     <!-- header -->
     <header class="header">
         <div class="header__line">
@@ -41,7 +153,7 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                 <div class="header__flex-nav">
                     <div class="header__nav-block-flex">
                         <h1><a href="../">Home</a></h1>
-                        <h1><a href="show_more_car.php">Choose Car</a></h1>
+                        <h1><a href="choose_car_page.php">Choose Car</a></h1>
                     </div>
                     <div class="header__nav-block-flex">
                         <h1><a href="">Contacts</a></h1>
@@ -60,7 +172,7 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                     </div>
                     <div class=\"block-inner\" id=\"userInner\">
                         <div class=\"block-inner-1\"><h3>История заказов</h3></div>
-                        <div class=\"block-inner-2\"><h3>Мой профиль</h3></div>
+                        <div class=\"block-inner-2\"><h3><a href=\"\">Мой профиль</a></h3></div>
                         <div class=\"block-inner-3\"><h3><a href=\"../php/exit_user.php\">Выйти</a></h3></div>
                     </div>
                 ";
@@ -91,12 +203,48 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             }
             ?>
             <div class="header-content-user__flex">
-                <div class="header-content-user__img-user"></div>
+                <div class="header-content-user__img-user">
+                    <?php
+                    if ($userImg_user_tmp == null) {
+                        echo "<div class=\"user-container-img\"><img src=\"../img/icons/user-no.png\" alt=\"errorUpImage\"></div>
+                        <div class=\"user-button-add-img\" id=\"buttonAddImg\"><h3>Добавить фото</h3></div>";
+                    }
+                    ?>
+                </div>
                 <div class="header-content-user__text-container">
-                    <div class="header-content-user__progress-container">
-                        <div class="header-content-user__progress-line"></div>
+                    <div class="header-content-user__progress-procent">
+                        <h2 id="userProcent">20%</h2>
                     </div>
+                    <div class="header-content-user__progress-container">
+                        <div class="header-content-user__progress-line" id="userProcentLine"></div>
+                    </div>
+                    <div class="header-content-user__text-box">
+                        <h3>Ваш логин:</h3>
+                        <h3><? echo $userLogin ?></h3>
+                    </div>
+                    <div class="header-content-user__text-box">
+                        <h3>Вашу ФИО:</h3>
+                        <h3><? echo $userSurname . ' ' . $userName . ' ' . $userPatronymic ?></h3>
+                    </div>
+                    <!-- <div class="header-content-user__text-box">
+                        <h3>Ваш email:</h3>
 
+                    </div> -->
+                    <div class="header-content-user__text-box">
+                        <h3>Ваш паспорт:</h3>
+                        <?php
+                        if ($userPasport_number == null && $userPasport_series == null && $userDate_of_birth == null && $userGender == null) {
+                            echo "<div class=\"user-button-add\" id=\"buttonAddPasport\"><h3>Добавить паспорт</h3></div>";
+                        }
+                        ?>
+                    </div>
+                    <div class="header-content-user__text-box">
+                        <h3>Ваши права:</h3>
+                        <?php
+                        if ($userDriver_license_number == null && $userDriver_license_series == null && $userDate_of_issue == null)
+                            echo "<div class=\"user-button-add\" id=\"buttonAddDriver\"><h3>Добавить права</h3></div>";
+                        ?>
+                    </div>
                 </div>
             </div>
         </div>
@@ -146,7 +294,14 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                 headerLineUserInner.style.display = 'none';
             }
         });
+        // add-img
+        let inputFile = document.querySelector('.input__file');
+        let inputFileLabel = document.querySelector('.input__file-button-text');
+        inputFile.addEventListener('change', () => {
+            inputFileLabel.innerHTML = 'Файл выбран';
+        });
     </script>
+    <script src="../js//user_script.js"></script>
 </body>
 
 </html>
