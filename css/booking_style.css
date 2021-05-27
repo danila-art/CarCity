@@ -1,0 +1,608 @@
+.booking {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/car-black-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    padding-top: 2%;
+    padding-bottom: 5%;
+}
+
+.booking-inner {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.3);
+    width: 80%;
+    height: auto;
+    margin: 2% auto;
+    overflow: hidden;
+}
+
+/* input[type=date] style */
+
+input[type=date] {
+    background-color: inherit;
+    border: 1px solid #91EBFE;
+    color: white;
+    padding: 4%;
+}
+
+input[type=date]:hover {
+    color: #91EBFE;
+}
+
+input[type=date]:hover {
+    color: #91EBFE;
+}
+
+input[type=text] {
+    background-color: inherit;
+    border: 1px solid #91EBFE;
+    color: white;
+    padding: 4%;
+}
+
+input[type=text]:hover {
+    color: #91EBFE;
+}
+
+input[type=text]:hover {
+    color: #91EBFE;
+}
+
+input[type=time] {
+    background-color: inherit;
+    border: 1px solid #91EBFE;
+    color: white;
+    padding: 4%;
+}
+
+input[type=time]:hover {
+    color: #91EBFE;
+}
+
+input[type=time]:hover {
+    color: #91EBFE;
+}
+
+input[type=checkbox] {
+    background-color: inherit;
+    border: 1px solid #91EBFE;
+    width: 25px;
+    height: 25px;
+    color: white;
+    padding: 4%;
+}
+
+input[type=checkbox]:checked {
+    color: #91EBFE;
+}
+
+/* box-animate-start */
+
+.block-animate__bar {
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    background: #91EBFE;
+    transition: all 1s linear;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.block-animate__delay {
+    animation-delay: .9s;
+    -webkit-animation-delay: .9s;
+}
+
+.block-animate__top {
+    top: 0;
+    left: 0;
+}
+
+.block-animate__right {
+    top: 8%;
+    right: -4.8%;
+    transform: rotate(90deg);
+}
+
+.block-animate__bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.block-animate__left {
+    top: 8%;
+    left: -4.8%;
+    transform: rotate(90deg);
+}
+
+@-webkit-keyframes h-move {
+    0% {
+        left: -5px;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+@keyframes h-move {
+    0% {
+        left: -5px;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.block-animate__top, .block-animate__bottom {
+    -webkit-animation-name: h-move;
+    animation-name: h-move;
+}
+
+@-webkit-keyframes v-move {
+    0% {
+        top: -5px;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+@keyframes v-move {
+    0% {
+        top: -5px;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+.block-animate__right, .block-animate__left {
+    -webkit-animation-name: v-move;
+    animation-name: v-move;
+}
+
+/* box-animate-end */
+
+.booking-inner__heading {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.4);
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+#thisPage {
+    color: #91EBFE;
+    text-shadow: 0px 0px 5px #91EBFE;
+}
+
+.cars-more__technical-specifications-text-box-h3-1 {
+    width: 70%;
+}
+
+.cars-more__technical-specifications-text-box-h3-2 {
+    width: 30%;
+}
+
+.count-1__name {
+    display: block;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.count-1__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.count-1__car-img {
+    display: block;
+    width: 40%;
+    height: auto;
+}
+
+.count-1__car-img img {
+    width: 100%;
+    height: auto;
+}
+
+.count-1__technical {
+    width: 40%;
+}
+
+.count-1__technical-box {
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.count__flex-button {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    width: 90%;
+    margin: 2% auto;
+    padding-top: 2%;
+}
+
+.count-1__button-cansel {
+    display: block;
+    width: 30%;
+    height: auto;
+    text-align: center;
+    border: 2px solid #fc2c2c;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.count-1__button-cansel:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #fc2c2c);
+    transition: .5s ease-in-out;
+}
+
+.count-1__button-complete {
+    display: block;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.count-1__button-complete:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .5s ease-in-out;
+}
+
+.price {
+    display: block;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(10, 10, 10, 0.3);
+    width: 100%;
+    height: auto;
+    padding-bottom: 3%;
+}
+
+.price__heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+}
+
+.price__heading h3 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    color: #91EBFE;
+    text-shadow: 0px 0px 5px #91EBFE;
+}
+
+.price__price-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 3%;
+}
+
+.price__price-box {
+    text-align: center;
+}
+
+.count-1 {
+    display: block;
+}
+
+.count-2 {
+    display: none;
+}
+
+.count-3 {
+    display: none;
+}
+
+.count-4 {
+    display: none;
+}
+
+.count-2__fio {
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.count-2__fio-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 90%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.count-2__fio-box {
+    display: block;
+    text-align: center;
+}
+
+.count-2__passport-driver-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.count-2__pasport {
+    display: block;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.count-2__passport-heading {
+    display: block;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.count-2__number-series {
+    display: block;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.passport-number-series {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 40%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.passport-number-series input {
+    width: 100%;
+    outline: none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+    margin: 1%;
+}
+
+.count-2__driver {
+    display: block;
+    width: 50%;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.driver-number-series {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 40%;
+    height: auto;
+    margin-left: 5%;
+}
+
+.driver-number-series input {
+    width: 100%;
+    outline: none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+    margin: 1%;
+}
+
+.input-date input {
+    width: 40%;
+    outline: none;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    border-radius: 20px;
+    transition: .3s ease-in-out;
+    margin: 1%;
+}
+
+.count-3__heading {
+    width: 80%;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.count-3__info {
+    width: 100%;
+    height: auto;
+    text-align: left;
+    margin-left: 5%;
+}
+
+.count-3__booking {
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.count-3__day {
+    display: block;
+    width: 40%;
+    margin: 2% auto;
+    text-align: center;
+}
+
+.count-3__day h3 {
+    padding-top: 1%;
+    padding-bottom: 1%;
+    text-align: center;
+}
+
+.count-3__time-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 90%;
+    margin: 0 auto;
+    justify-content: space-around;
+}
+
+.count-3__time-start {
+    display: block;
+    text-align: center;
+}
+
+.count-3__time-end {
+    display: block;
+    text-align: center;
+}
+
+.count-3__24-hours {
+    display: flex;
+    /* justify-content: space-around; */
+    width: 30%;
+    margin: 2% auto;
+    line-height: normal !important;
+}
+
+.count-3__go-home {
+    display: flex;
+    /* justify-content: space-around; */
+    width: 30%;
+    margin: 2% auto;
+    line-height: normal !important;
+}
+
+.count-3__24-hours h3 {
+    padding-left: 5%;
+    line-height: normal !important;
+}
+
+.count-3__go-home h3 {
+    padding-left: 5%;
+    line-height: normal !important;
+}
+
+.count-3__day-end {
+    display: none;
+    width: 40%;
+    margin: 2% auto;
+    text-align: center;
+}
+
+.count-3__day-end-box {
+    background-color: inherit;
+    width: 40%;
+    border: 1px solid #91EBFE;
+    color: white;
+    padding: 3%;
+    margin: 0 auto;
+}
+
+/* count-4 box-aplication */
+
+.count-4__box {
+    display: block;
+    background-color: rgba(0, 213, 255, 0.2);
+    width: 50%;
+    height: auto;
+    margin: 5% auto;
+    border: 1px solid #91EBFE;
+    border-radius: 5px;
+}
+
+.count-4__name-car {
+    display: block;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.count-4__img-car {
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.count-4__img-car img {
+    width: 100%;
+    height: auto;
+}
+
+.count-4__login-user {
+    display: block;
+}
+
+.count-4__flex {
+    display: flex;
+    width: 80%;
+}
+
+.count-4__flex h3:nth-child(1) {
+    width: 75%;
+    padding-left: 5%;
+}
+
+.count-4__flex h3:nth-child(2) {
+    width: 25%;
+}
+
+.count-4__day-start {
+    display: block;
+}
+
+.count-4__day-end {
+    display: none;
+}
+
+.count-4__time-start {
+    display: block;
+}
+
+.count-4__time-interval {
+    display: none;
+}
+
+.count-4__time-end {
+    display: block;
+}
+
+.count-4__day-24 {
+    display: block;
+}
+
+.count-4__go-home {
+    display: block;
+}
+
+.count-4__summ-total-money {
+    display: block;
+    padding-left: 10%;
+}

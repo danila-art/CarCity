@@ -161,9 +161,10 @@
                             двойным турбонаддувом. AMG GT S
                             и AMG GT R выводят спортивную мощь AMG на новый уровень.</h3>
                     </div>
-                    <div class="header__content-button">
-                        <h3>Узнать больше</h3>
-                    </div>
+                    <form class="show-more-button" action="page/show_more_car.php" method="post">
+                        <input type="hidden" name="post_id_car" value="9">
+                        <input type="submit" value="Узнать больше">
+                    </form>
                 </div>
                 <div class="container__content-img">
                     <div class="container__content-box-img">
@@ -275,12 +276,14 @@
                             большими характеристиками, который обрел достаточно большую популярность с момента своего
                             выхода.</h3>
                     </div>
-                    <div class="popular-cars__content-button-show">
-                        <h3>Узнать больше</h3>
-                    </div>
-                    <div class="popular-cars__content-botton-book">
-                        <h3>Забронировать</h3>
-                    </div>
+                    <form class="show-more-button" action="page/show_more_car.php" method="post">
+                        <input type="hidden" name="post_id_car" value="11">
+                        <input type="submit" value="Узнать больше">
+                    </form>
+                    <form class="booking-car-button" action="page/booking_page.php" method="post">
+                        <input type="hidden" name="post_id_car" value="11">
+                        <input type="submit" value="Забронировать">
+                    </form>
                 </div>
                 <div class="popular-cars__car-block-img">
                     <img src="img/header_popular_car/nissan_gtr_35_blue.png" alt="errorUpImage">
@@ -303,12 +306,14 @@
                             салоне и мощным двигателем,
                             созданным специально для Honda NSX.</h3>
                     </div>
-                    <div class="popular-cars__content-button-show">
-                        <h3>Узнать больше</h3>
-                    </div>
-                    <div class="popular-cars__content-botton-book">
-                        <h3>Забронировать</h3>
-                    </div>
+                    <form class="show-more-button" action="page/show_more_car.php" method="post">
+                        <input type="hidden" name="post_id_car" value="1">
+                        <input type="submit" value="Узнать больше">
+                    </form>
+                    <form class="booking-car-button" action="page/booking_page.php" method="post">
+                        <input type="hidden" name="post_id_car" value="1">
+                        <input type="submit" value="Забронировать">
+                    </form>
                 </div>
             </div>
         </div>
@@ -325,12 +330,14 @@
                             модель не была выпущена
                             столько раз, сколько было выпущено этой. Код автомобиля – “L140”.</h3>
                     </div>
-                    <div class="popular-cars__content-button-show">
-                        <h3>Узнать больше</h3>
-                    </div>
-                    <div class="popular-cars__content-botton-book">
-                        <h3>Забронировать</h3>
-                    </div>
+                    <form class="show-more-button" action="page/show_more_car.php" method="post">
+                        <input type="hidden" name="post_id_car" value="4">
+                        <input type="submit" value="Узнать больше">
+                    </form>
+                    <form class="booking-car-button" action="page/booking_page.php" method="post">
+                        <input type="hidden" name="post_id_car" value="4">
+                        <input type="submit" value="Забронировать">
+                    </form>
                 </div>
                 <div class="popular-cars__car-block-img">
                     <img src="img/header_popular_car/Lamborghini_Gallardo_black.png" alt="errorUpImage">

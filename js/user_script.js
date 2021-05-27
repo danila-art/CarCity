@@ -44,3 +44,17 @@ buttonAddDriver.addEventListener('click', () => {
         }
     }
 });
+
+const bookingBox = document.querySelectorAll('.booking__box');
+bookingBox.forEach((elem) => {
+    const blockDay = elem.querySelector('.booking__day-end');
+    const inputHiddenDay = elem.querySelector('.bookingDayEnd');
+    const blockTimeInterval = elem.querySelector('.booking__time-interval');
+    const inputHiddenTimeInterval = elem.querySelector('.bookingTimeInterval');
+    if (inputHiddenDay.value != '') {
+        blockDay.style.display = 'block';
+    }
+    if (inputHiddenTimeInterval.value != '') {
+        blockTimeInterval.style.display = 'block';
+    }
+});

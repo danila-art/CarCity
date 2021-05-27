@@ -1,0 +1,10 @@
+@media screen and (max-width: 1920px) {}
+
+@media screen and (max-width: 1366px) {
+    .count-3__heading h3 {
+        font-size: 22px;
+    }
+    .count-3__info h3 {
+        font-size: 14px;
+    }
+}

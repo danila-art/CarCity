@@ -351,34 +351,35 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
         </div>
     </section>
     <section class="price">
+        <?php
+        $priceRezult = $linkCarCityDataBase->query("SELECT * FROM `price_list` WHERE `id_car` = '$id_car'");
+        while ($carPrice = mysqli_fetch_assoc($priceRezult)) {
+            $priceHour = $carPrice['hour'];
+            $priceDay = $carPrice['day'];
+            $picerGoHome = $carPrice['go-home'];
+        }
+        ?>
         <div class="price__heading">
             <h3>Цены</h3>
         </div>
         <div class="price__price-flex">
             <div class="price__price-box">
                 <h3>1 час:</h3>
-                <h3></h3>
+                <h3><? echo $priceHour ?> руб.</h3>
             </div>
             <div class="price__price-box">
-                <h3>1-2 суток:</h3>
-                <h3></h3>
+                <h3>24 часа:</h3>
+                <h3><? echo $priceDay ?> руб.</h3>
             </div>
             <div class="price__price-box">
-                <h3>3-6 суток:</h3>
-                <h3></h3>
-            </div>
-            <div class="price__price-box">
-                <h3>7-14 суток:</h3>
-                <h3></h3>
-            </div>
-            <div class="price__price-box">
-                <h3>15-30 суток</h3>
-                <h3></h3>
+                <h3>Функция: Заберем сами:</h3>
+                <h3><? echo $picerGoHome ?> руб.</h3>
             </div>
         </div>
-        <div class="price__button-book">
-            <h3>Забронировать</h3>
-        </div>
+        <form class="show-page-button booking-car-button" action="booking_page.php" method="post">
+            <input type="hidden" name="post_id_car" value="<? echo $id_car ?>">
+            <input type="submit" value="Забронировать">
+        </form>
     </section>
     <footer class="footer">
         <div class="footer__logo-animate">

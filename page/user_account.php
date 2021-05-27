@@ -186,7 +186,7 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
         <!-- header_content -->
         <div class="header-content-user">
             <?php
-            $resultUser = $linkCarCityDataBase->query("SELECT `user`.`surname`, `user`.`name`, `user`.`patronymic`, `user`.`login`, `img_user`.`img_user_tmp`, `passport_user`.`pasport_number`,`passport_user`.`pasport_series`,`passport_user`.`Date_of_birth`,`passport_user`.`Gender`, `driver_license`.`driver_license_number`, `driver_license`.`driver_license_series`, `driver_license`.`date_of_issue` FROM `user` INNER JOIN `passport_user` ON `passport_user`.`id_user` = `user`.`id_user` INNER JOIN `driver_license` ON `driver_license`.`id_user` = `user`.`id_user` INNER JOIN `img_user` ON `user`.`id_user` = `img_user`.`id_user` AND `user`.`id_user` = '$id_user';");
+            $resultUser = $linkCarCityDataBase->query("SELECT `user`.`surname`, `user`.`name`, `user`.`patronymic`, `user`.`login`, `img_user`.`img_user_tmp`, `passport_user`.`pasport_number`,`passport_user`.`pasport_series`,`passport_user`.`Date_of_birth`, `driver_license`.`driver_license_number`, `driver_license`.`driver_license_series`, `driver_license`.`date_of_issue` FROM `user` INNER JOIN `passport_user` ON `passport_user`.`id_user` = `user`.`id_user` INNER JOIN `driver_license` ON `driver_license`.`id_user` = `user`.`id_user` INNER JOIN `img_user` ON `user`.`id_user` = `img_user`.`id_user` AND `user`.`id_user` = '$id_user';");
             while ($userAssok = mysqli_fetch_assoc($resultUser)) {
                 $userSurname = $userAssok['surname'];
                 $userName = $userAssok['name'];
@@ -196,7 +196,6 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                 $userPasport_number = $userAssok['pasport_number'];
                 $userPasport_series = $userAssok['pasport_series'];
                 $userDate_of_birth = $userAssok['Date_of_birth'];
-                $userGender = $userAssok['Gender'];
                 $userDriver_license_number = $userAssok['driver_license_number'];
                 $userDriver_license_series = $userAssok['driver_license_series'];
                 $userDate_of_issue = $userAssok['date_of_issue'];
@@ -213,7 +212,7 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                 </div>
                 <div class="header-content-user__text-container">
                     <div class="header-content-user__progress-procent">
-                        <h2 id="userProcent">20%</h2>
+                        <h2 id="userProcent">25%</h2>
                     </div>
                     <div class="header-content-user__progress-container">
                         <div class="header-content-user__progress-line" id="userProcentLine"></div>
@@ -226,14 +225,10 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                         <h3>Вашу ФИО:</h3>
                         <h3><? echo $userSurname . ' ' . $userName . ' ' . $userPatronymic ?></h3>
                     </div>
-                    <!-- <div class="header-content-user__text-box">
-                        <h3>Ваш email:</h3>
-
-                    </div> -->
                     <div class="header-content-user__text-box">
                         <h3>Ваш паспорт:</h3>
                         <?php
-                        if ($userPasport_number == null && $userPasport_series == null && $userDate_of_birth == null && $userGender == null) {
+                        if ($userPasport_number == null && $userPasport_series == null && $userDate_of_birth == null) {
                             echo "<div class=\"user-button-add\" id=\"buttonAddPasport\"><h3>Добавить паспорт</h3></div>";
                         }
                         ?>
@@ -249,6 +244,92 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             </div>
         </div>
     </header>
+    <section class="booking">
+        <div class="booking__heading">
+            <h3>Ваши карточки бронирования</h3>
+        </div>
+        <div class="booking__flex-container">
+            <?php
+            $bookingResult = $linkCarCityDataBase->query("SELECT `car`.`id_car`, `car`.`name`, `png_img`.`img_png`, `user`.`id_user`,`user`.`login`, `aplication`.`date_book-start`, `aplication`.`date-book-end`, `aplication`.`time-start`, `aplication`.`time_interval`, `aplication`.`time_end`, `aplication`.`day-24`, `aplication`.`go-home`, `aplication`.`total_summ_money`, `aplication`.`status` FROM `aplication` INNER JOIN `car` INNER JOIN `png_img` INNER JOIN `user` ON `aplication`.`id_car` = `car`.`id_car` AND `aplication`.`id_user` = `user`.`id_user` AND `aplication`.`id_car` = `png_img`.`id_car` AND `aplication`.`id_user` = '$id_user';");
+            $countBooking = mysqli_num_rows($bookingResult);
+            if ($countBooking > 0) {
+                while ($booking = mysqli_fetch_assoc($bookingResult)) {
+                    $carpng = base64_encode($booking['img_png']);
+                    echo "            <div class=\"booking__box\">
+                <div class=\"booking__name-car\">
+                    <h2>{$booking['name']}</h2>
+                </div>
+                <div class=\"booking__img-car\">
+                    <img src=\"data:image/png;base64,$carpng \" alt=\"errorUpImage\">
+                </div>
+                <div class=\"booking__login-user\">
+                    <div class=\"booking__flex\">
+                        <h3>Логин:</h3>
+                        <h3>{$booking['login']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__day-start\">
+                    <div class=\"booking__flex\">
+                        <h3>Дата начала:</h3>
+                        <h3 class=\"booking-output\">{$booking['date_book-start']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__day-end\">
+                    <input type=\"hidden\" value=\"{$booking['date-book-end']}\" class=\"bookingDayEnd\">
+                    <div class=\"booking__flex\">
+                        <h3>Дата окончания:</h3>
+                        <h3 class=\"booking-output\">{$booking['date-book-end']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__time-start\">
+                    <div class=\"booking__flex\">
+                        <h3>Время начала:</h3>
+                        <h3 class=\"booking-output\">{$booking['time-start']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__time-interval\">
+                    <input type=\"hidden\" value=\"{$booking['time_interval']}\" class=\"bookingTimeInterval\">
+                    <div class=\"booking__flex\">
+                        <h3>Время аренды:</h3>
+                        <h3 class=\"booking-output\">{$booking['time_interval']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__time-end\">
+                    <div class=\"booking__flex\">
+                        <h3>Время окончания:</h3>
+                        <h3 class=\"booking-output\">{$booking['time_end']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__day-24\">
+                    <div class=\"booking__flex\">
+                        <h3>24 часа:</h3>
+                        <h3 class=\"booking-output\">{$booking['day-24']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__go-home\">
+                    <div class=\"booking__flex\">
+                        <h3>Заберем сами:</h3>
+                        <h3 class=\"booking-output\">{$booking['go-home']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__summ-total-money\">
+                    <div class=\"booking__flex\">
+                        <h3>Итоговая стоимость:</h3>
+                        <h3 class=\"booking-output\">{$booking['total_summ_money']}</h3>
+                    </div>
+                </div>
+                <div class=\"booking__status\">
+                    <h3>{$booking['status']}</h3>
+                </div>
+            </div>";
+                }
+            } else {
+                echo "Карточек бронирования нет!";
+            }
+            ?>
+
+        </div>
+    </section>
     <!-- js script  -->
     <script>
         window.onload = function() {

@@ -166,16 +166,16 @@
                 </div>
                 <div class="slide-1__backround-clip-path">
                     <div class="slide-1__img-car">
-                        <img src="../img/cars_png/kisspng-porsche-911-turbo-s-cabriolet-porsche-930-sports-c-black-porsche-911-turbo-car-5a748d924b5d79.0030889815175878583087.png" alt="errorUpImage">
+                        <img src="../img/cars_png/160-1608678_porsche-911-hd-png-download.png" alt="errorUpImage">
                     </div>
-                    <div class="slide-1__buttons">
-                        <div class="slide-1__show-more-button">
-                            <h3>Узнать больше</h3>
-                        </div>
-                        <div class="slide-1__button-book">
-                            <h3>Забронировать</h3>
-                        </div>
-                    </div>
+                    <form class="show-more-button" action="show_more_car.php" method="post">
+                        <input type="hidden" name="post_id_car" value="13">
+                        <input type="submit" value="Узнать больше">
+                    </form>
+                    <form class="booking-car-button" action="booking_page.php" method="post">
+                        <input type="hidden" name="post_id_car" value="13">
+                        <input type="submit" value="Забронировать">
+                    </form>
                 </div>
             </div>
         </div>
@@ -271,9 +271,10 @@
                                     <input type=\"submit\" value=\"Узнать больше\">
                                 </form>
                             </div>
-                            <div class=\"car-flex__text-content-book\">
-                                <h3>Забронировать</h3>
-                            </div>
+                            <form class=\"booking-car-button\" action=\"booking_page.php\" method=\"post\">
+                                <input type=\"hidden\" name=\"post_id_car\" value=\"{$carData['id_car']}\">
+                                <input type=\"submit\" value=\"Забронировать\">
+                            </form>
                         </div>
                         <div class=\"car-flex__img-png\">
                             <img src=\"data:image/png;base64,$imgPngCar\" alt=\"errorUpImage\">
@@ -297,9 +298,10 @@
                                     <input type=\"submit\" value=\"Узнать больше\">
                                 </form>
                             </div>
-                            <div class=\"car-flex__text-content-book\">
-                                <h3>Забронировать</h3>
-                            </div>
+                            <form class=\"booking-car-button\" action=\"booking_page.php\" method=\"post\">
+                                <input type=\"hidden\" name=\"post_id_car\" value=\"{$carData['id_car']}\">
+                                <input type=\"submit\" value=\"Забронировать\">
+                            </form>
                         </div>
                     </div>";
             }
