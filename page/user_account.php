@@ -47,14 +47,16 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             <div class="background-module__close-block">
                 <img src="../img/icons/cancel-white.png" alt="errorUpImage">
             </div>
-            <form action="" method="post" id="form-add-img" enctype="multipart/form-data">
+            <form action="../php/user_add_img.php" method="post" id="form-add-img" enctype="multipart/form-data">
                 <div class="background-module__input-box">
                     <div class="input__wrapper">
+                        <input type="hidden" name="id_user" value="<? echo $id_user ?>">
                         <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
                         <label for="input__file" class="input__file-button">
                             <span class="input__file-icon-wrapper"><img class="input__file-icon" src="../img/icons/upload.png" alt="Выбрать файл" width="25"></span>
                             <span class="input__file-button-text">Выберите файл</span>
                         </label>
+                        <h3 style="text-align: center; color: red;" class="img-error"></h3>
                     </div>
                 </div>
                 <div class="background-module__submit-box">
@@ -88,18 +90,6 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                 <div class="background-module__input-box">
                     <label for="userDate_of_birth">Дата рождения</label>
                     <input class="input-add" type="date" name="userDate_of_birth">
-                </div>
-                <div class="background-module__input-box">
-                    <div class="input-add__flex">
-                        <div class="input-add__gender">
-                            <input type="radio" value="Мужской" name="input-gender">
-                            <label for="input-gender">Мужской</label>
-                        </div>
-                        <div class="input-add__gender">
-                            <input type="radio" value="Женский" name="input-gender">
-                            <label for="input-gender">Женский</label>
-                        </div>
-                    </div>
                 </div>
                 <div class="background-module__submit-box">
                     <input type="submit" value="Добавить">
@@ -207,6 +197,9 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                     if ($userImg_user_tmp == null) {
                         echo "<div class=\"user-container-img\"><img src=\"../img/icons/user-no.png\" alt=\"errorUpImage\"></div>
                         <div class=\"user-button-add-img\" id=\"buttonAddImg\"><h3>Добавить фото</h3></div>";
+                    } else {
+                        $imgUser = base64_encode($userImg_user_tmp);
+                        echo "<div class=\"user-container-img\"><img src=\"data:image/jpeg;base64, $imgUser\" alt=\"errorUpImage\"></div>";
                     }
                     ?>
                 </div>
@@ -248,6 +241,9 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
         <div class="booking__heading">
             <h3>Ваши карточки бронирования</h3>
         </div>
+        <div class="booking__text-h3">
+            <h3>Здесь находятся карточки с вашим бронированием на автомобиль.</h3>
+        </div>
         <div class="booking__flex-container">
             <?php
             $bookingResult = $linkCarCityDataBase->query("SELECT `car`.`id_car`, `car`.`name`, `png_img`.`img_png`, `user`.`id_user`,`user`.`login`, `aplication`.`date_book-start`, `aplication`.`date-book-end`, `aplication`.`time-start`, `aplication`.`time_interval`, `aplication`.`time_end`, `aplication`.`day-24`, `aplication`.`go-home`, `aplication`.`total_summ_money`, `aplication`.`status` FROM `aplication` INNER JOIN `car` INNER JOIN `png_img` INNER JOIN `user` ON `aplication`.`id_car` = `car`.`id_car` AND `aplication`.`id_user` = `user`.`id_user` AND `aplication`.`id_car` = `png_img`.`id_car` AND `aplication`.`id_user` = '$id_user';");
@@ -255,6 +251,9 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             if ($countBooking > 0) {
                 while ($booking = mysqli_fetch_assoc($bookingResult)) {
                     $carpng = base64_encode($booking['img_png']);
+                    if ($status = 'Ожидает модерацию') {
+                        $statusOut = "<h3 style=\"color: #ff8834\">Ожидает модерацию</h3>";
+                    }
                     echo "            <div class=\"booking__box\">
                 <div class=\"booking__name-car\">
                     <h2>{$booking['name']}</h2>
@@ -315,11 +314,11 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                 <div class=\"booking__summ-total-money\">
                     <div class=\"booking__flex\">
                         <h3>Итоговая стоимость:</h3>
-                        <h3 class=\"booking-output\">{$booking['total_summ_money']}</h3>
+                        <h3 class=\"booking-output\">{$booking['total_summ_money']}  руб.</h3>
                     </div>
                 </div>
                 <div class=\"booking__status\">
-                    <h3>{$booking['status']}</h3>
+                    $statusOut
                 </div>
             </div>";
                 }

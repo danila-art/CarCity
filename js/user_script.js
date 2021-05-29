@@ -58,3 +58,26 @@ bookingBox.forEach((elem) => {
         blockTimeInterval.style.display = 'block';
     }
 });
+
+let form_add_img = document.getElementById('form-add-img');
+form_add_img.addEventListener('submit', (e) => {
+    e.preventDefault();
+    const inputFile = document.getElementById('input__file');
+    let file = document.getElementById('input__file').files[0];
+    console.log('1' + file.type);
+    if (file.type != "image/jpeg") {
+        console.log('не катит');
+        form_add_img.querySelector('.img-error').innerHTML = 'Тип файла не подходит';
+        inputFile.addEventListener('change', () => {
+            file = document.getElementById('input__file').files[0];
+            if (file.type == "image/jpeg") {
+                form_add_img.querySelector('.img-error').innerHTML = '';
+            } else {
+                form_add_img.querySelector('.img-error').innerHTML = 'Тип файла не подходит';
+            }
+            console.log('2' + file.type);
+        });
+    } else {
+        form_add_img.submit();
+    }
+});

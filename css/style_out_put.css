@@ -1,0 +1,242 @@
+body {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    border: none;
+}
+
+h3 {
+    font-family: Rafale, serif;
+    color: white;
+    font-style: normal;
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+*, :after, :before {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box
+}
+
+.mk-spinner-wrap {
+    display: block;
+    background-color: #0a0a0a;
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    z-index: 10000;
+}
+
+@-webkit-keyframes a {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+@keyframes a {
+    0% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg)
+    }
+    to {
+        -webkit-transform: rotate(1turn);
+        transform: rotate(1turn)
+    }
+}
+
+.mk-spinner-ring {
+    content: "";
+    display: inline-block;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    top: 50%;
+    margin-top: -25px;
+    left: 50%;
+    margin-left: -25px;
+    z-index: 1;
+    border-radius: 50%;
+    border: 3px solid #00bcd4;
+    border-left-color: transparent;
+    background: transparent;
+    -webkit-animation: a 1s infinite linear;
+    animation: a 1s infinite linear
+}
+
+.output {
+    display: block;
+    position: fixed;
+    background-image: url('../img/background/car-black-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 100%;
+    height: 100vh;
+}
+
+.output__box {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.4);
+    width: 70%;
+    height: auto;
+    margin: 10% auto;
+    z-index: 1100;
+    overflow: hidden;
+    animation: widthBlockOpen .5s ease-in-out;
+    animation-iteration-count: 1;
+}
+
+.output__h3 {
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.output__button-main {
+    display: block;
+    width: 40%;
+    height: auto;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 2% auto;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.output__button-main:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 25px #91EBFE);
+    transition: .5s ease-in-out;
+}
+
+/* box-animate-start */
+
+.block-animate__bar {
+    position: absolute;
+    width: 10%;
+    height: 2px;
+    background: #91EBFE;
+    transition: all 1s linear;
+    -webkit-animation-duration: 2s;
+    animation-duration: 2s;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+}
+
+.block-animate__delay {
+    animation-delay: .9s;
+    -webkit-animation-delay: .9s;
+}
+
+.block-animate__top {
+    top: 0;
+    left: 0;
+}
+
+.block-animate__right {
+    top: 8%;
+    right: -4.8%;
+    transform: rotate(90deg);
+}
+
+.block-animate__bottom {
+    bottom: 0;
+    left: 0;
+}
+
+.block-animate__left {
+    top: 8%;
+    left: -4.8%;
+    transform: rotate(90deg);
+}
+
+@-webkit-keyframes h-move {
+    0% {
+        left: -5px;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+@keyframes h-move {
+    0% {
+        left: -5px;
+    }
+    100% {
+        left: 120%;
+    }
+}
+
+.block-animate__top, .block-animate__bottom {
+    -webkit-animation-name: h-move;
+    animation-name: h-move;
+}
+
+@-webkit-keyframes v-move {
+    0% {
+        top: -5px;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+@keyframes v-move {
+    0% {
+        top: -5px;
+    }
+    100% {
+        top: 120%;
+    }
+}
+
+.block-animate__right, .block-animate__left {
+    -webkit-animation-name: v-move;
+    animation-name: v-move;
+}
+
+/* box-animate-end */
+
+.booking-car-button input[type=submit] {
+    display: block;
+    background-color: inherit;
+    width: 50%;
+    height: auto;
+    padding: 2%;
+    text-align: center;
+    border: 2px solid #9BFEF9;
+    border-radius: 20px;
+    margin: 4% auto;
+    cursor: pointer;
+    transition: .5s ease-in-out;
+}
+
+.booking-car-button input[type=submit]:hover {
+    box-shadow: inset 0px 0px 5px rgba(0, 0, 0, 0.25);
+    filter: drop-shadow(0px 0px 15px #91EBFE);
+    transition: .5s;
+}
