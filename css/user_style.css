@@ -98,6 +98,24 @@
     height: auto;
 }
 
+.user-active-img-container {
+    display: flex;
+    width: 90%;
+    height: 75%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 2%;
+    align-items: center;
+}
+
+.user-active-img-container img {
+    object-fit: cover;
+    width: inherit;
+    height: inherit;
+    object-position: center top;
+    border-radius: 250px;
+}
+
 .user-button-add-img {
     display: block;
     border: 1px solid white;

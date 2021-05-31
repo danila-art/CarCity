@@ -376,7 +376,7 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
                 <h3><? echo $picerGoHome ?> руб.</h3>
             </div>
         </div>
-        <form class="show-page-button booking-car-button" action="booking_page.php" method="post">
+        <form class="show-page-button booking-car-button" action="../phpbooking_page.php" method="post">
             <input type="hidden" name="post_id_car" value="<? echo $id_car ?>">
             <input type="submit" value="Забронировать">
         </form>

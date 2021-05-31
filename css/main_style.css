@@ -1032,7 +1032,7 @@ input {
 }
 
 .auth_user img {
-    width: 80%;
+    width: 70%;
     height: auto;
 }
 
@@ -1063,6 +1063,7 @@ input {
     background-image: url('../img/icons/background-user.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 10vw;
     height: 20vh;
     text-align: center;
@@ -1073,6 +1074,7 @@ input {
     background-image: url('../img/icons/background-user.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 10vw;
     height: 20vh;
     text-align: center;
@@ -1084,6 +1086,7 @@ input {
     background-image: url('../img/icons/background-user.png');
     background-repeat: no-repeat;
     background-size: contain;
+    background-position: center;
     width: 10vw;
     height: 20vh;
     text-align: center;

@@ -51,7 +51,7 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                 <div class="background-module__input-box">
                     <div class="input__wrapper">
                         <input type="hidden" name="id_user" value="<? echo $id_user ?>">
-                        <input name="file" type="file" name="file" id="input__file" class="input input__file" multiple>
+                        <input type="file" name="file_add_img" id="input__file" class="input input__file">
                         <label for="input__file" class="input__file-button">
                             <span class="input__file-icon-wrapper"><img class="input__file-icon" src="../img/icons/upload.png" alt="Выбрать файл" width="25"></span>
                             <span class="input__file-button-text">Выберите файл</span>
@@ -199,7 +199,8 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                         <div class=\"user-button-add-img\" id=\"buttonAddImg\"><h3>Добавить фото</h3></div>";
                     } else {
                         $imgUser = base64_encode($userImg_user_tmp);
-                        echo "<div class=\"user-container-img\"><img src=\"data:image/jpeg;base64, $imgUser\" alt=\"errorUpImage\"></div>";
+                        echo "<div class=\"user-active-img-container\"><img src=\"data:image/jpeg;base64, $imgUser\" alt=\"errorUpImage\"></div>
+                        <div class=\"user-button-add-img\" id=\"buttonAddImg\"><h3>Поменять фото</h3></div>";
                     }
                     ?>
                 </div>

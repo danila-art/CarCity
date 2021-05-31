@@ -37,13 +37,25 @@ const formRegistration = document.getElementById('formRegistrattion');
 formRegistration.addEventListener('submit', (event) => {
     let errorArrReg = [];
     event.preventDefault();
+    const errorRepeatpassword = document.querySelector('.error-repeat-password');
     let inputCollection = formRegistration.querySelectorAll('.input__text');
+    const regCheckBox = formRegistration.querySelectorAll('.input__check');
     inputCollection.forEach((inputElem) => {
         if (inputElem.value == '') {
             inputElem.placeholder = 'Поле не заполнено';
             errorArrReg.push(false);
         }
     });
+    if (inputCollection[4].value != inputCollection[5].value && inputCollection[5].value != '') {
+        errorRepeatpassword.innerHTML = 'Пароли не совпадают';
+        errorArrReg.push(false);
+        inputCollection[5].addEventListener('keydown', () => {
+            errorRepeatpassword.innerHTML = '';
+        });
+    }
+    // if (!regCheckBox.chacked) {
+    //     errorArrReg.push(false);
+    // }
     if (errorArrReg.length == 0) {
         formRegistration.submit();
     }

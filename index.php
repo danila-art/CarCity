@@ -57,6 +57,7 @@
                     <div class="block-registration__box-input">
                         <label for="repeatPassword">Повторите пароль</label>
                         <input type="password" class="input__text" name="repeatPassword">
+                        <h3 style="color: red; text-align:center;" class="error-repeat-password"></h3>
                     </div>
                     <div class="block-registration__check-box">
                         <div class="block-registration__flex-check-box">
