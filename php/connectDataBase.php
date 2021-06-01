@@ -1,4 +1,3 @@
-<!-- файл подключения к базе данных -->
 <?php
 $host = 'localhost'; // адрес сервера
 $database = 'car_city_database'; // имя базы данных

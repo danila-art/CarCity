@@ -47,6 +47,9 @@
     .price__button-book h3 {
         font-size: 24px;
     }
+    .booking-car-button input[type=submit] {
+        font-size: 22px;
+    }
 }
 
 @media screen and (max-width: 1366px) {
@@ -97,5 +100,8 @@
     }
     .price__button-book h3 {
         font-size: 18px;
+    }
+    .booking-car-button input[type=submit] {
+        font-size: 20px;
     }
 }

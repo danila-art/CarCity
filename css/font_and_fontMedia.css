@@ -121,7 +121,7 @@ span {
         font-size: 16px;
     }
     .advantageBlock1>.advantageBlock__content-text {
-        font-size: 14px;
+        font-size: 17px;
     }
     .advantageBlock1>.advantageBlock__content-text h3 {
         line-height: 26px;
@@ -130,7 +130,7 @@ span {
         font-size: 16px;
     }
     .advantageBlock2>.advantageBlock__content-text {
-        font-size: 14px;
+        font-size: 17px;
     }
     .advantageBlock2>.advantageBlock__content-text h3 {
         line-height: 26px;
@@ -139,7 +139,7 @@ span {
         font-size: 16px;
     }
     .advantageBlock3>.advantageBlock__content-text {
-        font-size: 14px;
+        font-size: 17px;
     }
     .advantageBlock3>.advantageBlock__content-text h3 {
         line-height: 26px;
@@ -148,7 +148,7 @@ span {
         font-size: 16px;
     }
     .advantageBlock4>.advantageBlock__content-text {
-        font-size: 14px;
+        font-size: 17px;
     }
     .advantageBlock4>.advantageBlock__content-text h3 {
         line-height: 26px;
@@ -157,7 +157,7 @@ span {
         font-size: 16px;
     }
     .advantageBlock5>.advantageBlock__content-text {
-        font-size: 14px;
+        font-size: 17px;
     }
     .advantageBlock5>.advantageBlock__content-text h3 {
         line-height: 26px;
@@ -166,7 +166,7 @@ span {
         font-size: 24px;
     }
     .advantages__active>.advantageBlock__content-text {
-        font-size: 18px;
+        font-size: 22px;
     }
     .advantages__active>.advantageBlock__content-text h3 {
         line-height: 36px;
@@ -208,6 +208,13 @@ span {
     }
     .block-autorization-and-registration input[type=submit] {
         font-size: 18px;
+    }
+    /* button show more and booking button */
+    .show-more-button input[type=submit] {
+        font-size: 22px;
+    }
+    .booking-car-button input[type=submit] {
+        font-size: 22px;
     }
 }
 

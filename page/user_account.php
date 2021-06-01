@@ -76,20 +76,24 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             <div class="background-module__close-block">
                 <img src="../img/icons/cancel-white.png" alt="errorUpImage">
             </div>
-            <form action="" method="post" id="form-add-pasport">
+            <form action="../php/user_add_passport.php" method="post" id="form-add-pasport">
+                <input type="hidden" name="id_user" value="<? echo $id_user ?>">
                 <div class="input-add__flex-box">
                     <div class="background-module__input-box">
                         <label for="userPasport_number">Номер паспорта</label>
-                        <input class="input-add" type="text" name="userPasport_number">
+                        <input class="input-add" maxlength="6" type="text" name="userPasport_number">
+                        <h4 style="color: red; text-align: center;"></h4>
                     </div>
                     <div class="background-module__input-box">
                         <label for="userPasport_series">Серия паспорта</label>
-                        <input class="input-add" type="text" name="userPasport_series">
+                        <input class="input-add" maxlength="4" type="text" name="userPasport_series">
+                        <h4 style="color: red; text-align: center;"></h4>
                     </div>
                 </div>
                 <div class="background-module__input-box">
                     <label for="userDate_of_birth">Дата рождения</label>
                     <input class="input-add" type="date" name="userDate_of_birth">
+                    <h4 style="color: red; text-align: center;"></h4>
                 </div>
                 <div class="background-module__submit-box">
                     <input type="submit" value="Добавить">
@@ -108,24 +112,28 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             <div class="background-module__close-block">
                 <img src="../img/icons/cancel-white.png" alt="errorUpImage">
             </div>
-            <form action="" method="post" id="form-add-driver">
+            <form action="../php/user_add_driver.php" method="post" id="form-add-driver">
+                <input type="hidden" name="id_user" value="<? echo $id_user ?>">
                 <div class="input-add__flex">
                     <div class="background-module__input-box">
                         <div class="input-add__box">
                             <label for="userDriver_license_number">Номер удостоверения</label>
-                            <input class="input-add" type="text" name="userDriver_license_number">
+                            <input class="input-add" maxlength="6" type="text" name="userDriver_license_number">
+                            <h4 style="color: red; text-align: center;"></h4>
                         </div>
                     </div>
                     <div class="background-module__input-box">
                         <div class="input-add__box">
                             <label for="userDriver_license_series">Серия удостоверения</label>
-                            <input class="input-add" type="text" name="userDriver_license_series">
+                            <input class="input-add" maxlength="4" type="text" name="userDriver_license_series">
+                            <h4 style="color: red; text-align: center;"></h4>
                         </div>
                     </div>
                 </div>
                 <div class="background-module__input-box">
                     <label for="userDate_of_issue">Дата выдачи</label>
                     <input class="input-add" type="date" name="userDate_of_issue">
+                    <h4 style="color: red; text-align: center;"></h4>
                 </div>
                 <div class="background-module__submit-box">
                     <input type="submit" value="Добавить">
@@ -224,14 +232,49 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
                         <?php
                         if ($userPasport_number == null && $userPasport_series == null && $userDate_of_birth == null) {
                             echo "<div class=\"user-button-add\" id=\"buttonAddPasport\"><h3>Добавить паспорт</h3></div>";
+                        } else {
+                            echo "<div class=\"user-passport-active\">
+                                    <div class=\"user-passport-active__flex\">
+                                        <div>
+                                            <h3>Номер:</h3>
+                                            <h3>$userPasport_number</h3>
+                                        </div>
+                                        <div>
+                                            <h3>Серия:</h3>
+                                            <h3>$userPasport_series</h3>
+                                        </div>
+                                    </div>
+                                    <div class=\"user-passport-date\">
+                                        <h3>Дата рождения:</h3>
+                                        <h3>$userDate_of_birth</h3>
+                                    </div>
+                                </div>";
                         }
                         ?>
                     </div>
                     <div class="header-content-user__text-box">
                         <h3>Ваши права:</h3>
                         <?php
-                        if ($userDriver_license_number == null && $userDriver_license_series == null && $userDate_of_issue == null)
+                        if ($userDriver_license_number == null && $userDriver_license_series == null && $userDate_of_issue == null) {
                             echo "<div class=\"user-button-add\" id=\"buttonAddDriver\"><h3>Добавить права</h3></div>";
+                        } else {
+                            echo "<div class=\"user-driver-active\">
+                                    <div class=\"user-driver-active__flex\">
+                                        <div>
+                                            <h3>Номер:</h3>
+                                            <h3>$userDriver_license_number</h3>
+                                        </div>
+                                        <div>
+                                            <h3>Серия:</h3>
+                                            <h3>$userDriver_license_series</h3>
+                                        </div>
+                                    </div>
+                                    <div class=\"user-driver-date\">
+                                        <h3>Дата выдачи:</h3>
+                                        <h3>$userDate_of_issue</h3>
+                                    </div>
+                            </div>";
+                        }
                         ?>
                     </div>
                 </div>
@@ -324,12 +367,55 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             </div>";
                 }
             } else {
-                echo "Карточек бронирования нет!";
+                echo "<div style=\"display:block; width: 100%; padding-top:5%; padding-bottom:5%; text-align: center;\"><h2>Карточек бронирования пока нет!</h2></div>";
             }
             ?>
 
         </div>
     </section>
+    <footer class="footer">
+        <div class="footer__logo-animate">
+            <div class="footer__neon-left-shell">
+                <div class="footer__neon-left footer-neon"></div>
+            </div>
+            <div class="footer__logo-img">
+                <img src="../img/logo/logo.png" alt="errorUpImage">
+            </div>
+            <div class="footer__neon-right-shell">
+                <div class="footer__neon-right footer-neon"></div>
+            </div>
+        </div>
+        <div class="footer__flex">
+            <div class="footer__content-left">
+                <div class="footer__social-heading">
+                    <h3>Мы в соц сетях:</h3>
+                </div>
+                <div class="footer__flex-social">
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/facebook.png" alt="errorUpImage">
+                    </div>
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/instagram.png" alt="errorUpImage">
+                    </div>
+                    <div class="footer__social-box">
+                        <img src="../img/social-media-app-icons-collection/twitter.png" alt="errorUpImage">
+                    </div>
+
+                </div>
+            </div>
+            <div class="footer__content-center">
+                <h3>О нас</h3>
+                <h3>Контакты</h3>
+                <h3>Карта сайта</h3>
+                <h3>Выбрать авто</h3>
+            </div>
+            <div class="footer__content-right">
+                <h3>Политика конфидициальности</h3>
+                <h3>Обработка персональных данных</h3>
+                <h3>Условия аренды</h3>
+            </div>
+        </div>
+    </footer>
     <!-- js script  -->
     <script>
         window.onload = function() {

@@ -193,7 +193,7 @@
                         <img src="img/advantages/coffee.png" alt="errorUpImage">
                     </div>
                     <div class="advantageBlock__content-text">
-                        <h3></h3>
+                        <h3>Пока мы проверяем документы и подготавливаем договор вы можете выпить чашечку кофе или чая, а в это время наш специалист ознакомит вас с инструкицей.</h3>
                     </div>
                 </div>
                 <div class="advantages__advantage-block advantageBlock2" id="advantageBlock2" data-active="0" onclick="slideClick(this)">
@@ -205,7 +205,7 @@
                         <img src="img/advantages/personal.png" alt="errorUpImage">
                     </div>
                     <div class="advantageBlock__content-text">
-                        <h3></h3>
+                        <h3>У нас лучший квалифицированный персонал, который никогда не нахамит, всегда отзывчив и поможет в случае надобности.</h3>
                     </div>
                 </div>
                 <div class="advantages__advantage-block advantages__active" id="advantageBlock3" data-active="1" onclick="slideClick(this)">
@@ -230,7 +230,7 @@
                         <img src="img/advantages/garantii.png" alt="errorUpImage">
                     </div>
                     <div class="advantageBlock__content-text">
-                        <h3></h3>
+                        <h3>Все наши Гарантии на высшем уровне и безопасности для вас, наш персонал ознакомит с каждыми деталями договора и ответит на любые ваши вопросы.</h3>
                     </div>
                 </div>
                 <div class="advantages__advantage-block advantageBlock5" id="advantageBlock5" data-active="0" onclick="slideClick(this)">
@@ -241,7 +241,7 @@
                         <img src="img/advantages/platform.png" alt="errorUpImage">
                     </div>
                     <div class="advantageBlock__content-text">
-                        <h3></h3>
+                        <h3>Наша система адаптивна к любому устройству, будь то компьютер или же смартфон. Мы каждый день проверяем систему, отлавливаем ошибки и сразу же исправляем, стараясь сделать всел лучше для вас.</h3>
                     </div>
                 </div>
             </div>

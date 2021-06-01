@@ -32,6 +32,7 @@ input[type=submit] {
     .car-flex__text-content-book h3 {
         font-size: 22px;
     }
+    
 }
 
 @media screen and (max-width: 1366px) {

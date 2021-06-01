@@ -61,10 +61,6 @@
     margin: 2% auto;
 }
 
-.header-content-user__text-box h3 {
-    padding: 2%;
-}
-
 .header-content-user__text-box h3:nth-child(2) {
     padding: 0;
     padding-left: 10%;
@@ -534,4 +530,34 @@
 .booking__status {
     text-align: center;
     padding-top: 1%;
+}
+
+.user-passport-active {
+    display: block;
+}
+
+.user-passport-active__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.user-passport-date {
+    padding-left: 5%;
+    display: block;
+}
+
+.user-driver-active {
+    display: block;
+}
+
+.user-driver-active__flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+}
+
+.user-driver-date {
+    padding-left: 5%;
+    display: block;
 }

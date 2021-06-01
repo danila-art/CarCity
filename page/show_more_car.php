@@ -234,7 +234,10 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
                         <h3><? echo $carPreview ?></h3>
                     </div>
                     <div class="header__content-inner-text-button-book">
-                        <h3>Забронировать</h3>
+                        <form class="show-page-button booking-car-button" id="carThisForm" action="booking_page.php" method="post">
+                            <input type="hidden" name="post_id_car" value="<? echo $id_car ?>">
+                            <h3 onclick="document.getElementById('carThisForm').submit();">Забронировать</h3>
+                        </form>
                     </div>
                 </div>
             </div>
@@ -376,7 +379,7 @@ while ($carOut = mysqli_fetch_assoc($carResult)) {
                 <h3><? echo $picerGoHome ?> руб.</h3>
             </div>
         </div>
-        <form class="show-page-button booking-car-button" action="../phpbooking_page.php" method="post">
+        <form class="show-page-button booking-car-button" action="booking_page.php" method="post">
             <input type="hidden" name="post_id_car" value="<? echo $id_car ?>">
             <input type="submit" value="Забронировать">
         </form>
