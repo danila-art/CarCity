@@ -124,7 +124,7 @@
                     </div>
                     <div class="header__nav-block-flex">
                         <h1><a href="">Contacts</a></h1>
-                        <h1><a href="">About</a></h1>
+                        <h1><a href="page/about.php">About</a></h1>
                     </div>
                 </div>
                 <div class="header__neon"></div>

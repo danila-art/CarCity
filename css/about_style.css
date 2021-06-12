@@ -1,0 +1,54 @@
+.header {
+    background-color: rgba(0, 0, 0, 0.7);
+}
+
+.header__content-heading {
+    display: block;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    text-align: center;
+}
+
+.header__content-img {
+    display: block;
+    width: 30%;
+    height: auto;
+    margin: 1% auto;
+}
+
+.header__content-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+}
+
+.header__text-content {
+    display: block;
+    width: 80%;
+    height: auto;
+    text-align: center;
+    margin: 0 auto;
+    padding-top: 1%;
+    padding-bottom: 2%;
+}
+
+.about-main {
+    display: block;
+    background-image: url('../img/background/383292-black-lozenge-abstract-minimalism-artwork.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-blend-mode: multiply;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: auto;
+    padding-bottom: 2%;
+}
+
+.about-main__heading {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}

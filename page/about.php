@@ -11,6 +11,7 @@
     <link rel="shortcut icon" href="../img/logo/logo.png">
     <link rel="stylesheet" href="../css/main_style.css">
     <link rel="stylesheet" href="../css/style_autorization_registration.css">
+    <link rel="stylesheet" href="../css/about_style.css">
     <!--header and footer font media -->
     <link rel="stylesheet" media="screen" href="../css/font_and_fontMedia.css">
     <link rel="stylesheet" media="screen" href="../css/media_block_style.css">
@@ -154,7 +155,28 @@
             ?>
         </div>
         <!-- header_content -->
+        <div class="header__content">
+            <div class="header__content-heading">
+                <h2>Здесь вы можете больше узнать о компании</h2>
+            </div>
+            <div class="header__content-img">
+                <img src="../img/about//cheerful-call-center-operators-during-working-process_74855-4003.jpg" alt="errorUpImage">
+            </div>
+            <div class="header__text-content">
+                <h3>Главная задача компании CarCity – сделать такую услугу, как аренда элитных автомобилей доступной на
+                    территории
+                    Астраханской области и сделать вашу жизнь немного лучше
+                    предоставив вам возможность взять в аренду автомобиль с восхитительным дизайном и невероятной
+                    мощностью.</h3>
+            </div>
+        </div>
     </header>
+    <section class="about-main">
+        <div class="about-main__heading">
+            <h2>О компании</h2>
+        </div>
+            
+    </section>
     <!-- js script  -->
     <script>
         window.onload = function() {
