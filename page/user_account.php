@@ -34,6 +34,58 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
     <div class="mk-spinner-wrap">
         <div class="mk-spinner-ring"></div>
     </div>
+    <section class="contacts" id="contactsContainer">
+        <div class="contacts__box">
+            <!-- box-animate -->
+            <div class="block-animate__bar block-animate__top"></div>
+            <div class="block-animate__bar block-animate__right block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__bottom block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__left"></div>
+            <div class="block__close">
+                <img src="../img/icons/cancel-white.png" alt="errorUpImage">
+            </div>
+            <div class="contacts__box-heading">
+                <h2>Контакты</h2>
+            </div>
+            <div class="contacts__box-text">
+                <h2>Адрес:</h2>
+                <h2>Ул. Савушкина дом. 34</h2>
+            </div>
+            <div class="contacts__box-text">
+                <h2>Номер телефона:</h2>
+                <h2>+7 937 654-32-32</h2>
+            </div>
+            <div class="contacts__box-text">
+                <h2>Электронная почта:</h2>
+                <h2>Car_City_30@mail.ru</h2>
+            </div>
+            <div class="contacts__box-admin-data">
+                <h2>Администратор</h2>
+            </div>
+            <div class="contacts__box-admin-img">
+                <img src="../img/admin_image.jpg" alt="errorUpImage">
+            </div>
+            <div class="contacts__box-admin-data">
+                <h2>ФИО</h2>
+                <h2>Сивов Данила Алексеевич</h2>
+            </div>
+            <div class="contacts__box-admin-data">
+                <h2>Электронная почта</h2>
+                <h2>danila.sivov.96@mail.ru</h2>
+            </div>
+            <div class="contacts__box-admin-social-flex">
+                <div class="contacts__box-admin-social-box">
+                    <img src="../img/social-media-app-icons-collection/twitter.png" alt="errorUpImage">
+                </div>
+                <div class="contacts__box-admin-social-box">
+                    <img src="../img/social-media-app-icons-collection/facebook.png" alt="errorUpImage">
+                </div>
+                <div class="contacts__box-admin-social-box">
+                    <img src="../img/social-media-app-icons-collection/instagram.png" alt="errorUpImage">
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="background-module" id="moduleAddData">
         <div class="background-module__add-img-user" id="moduleAddImg">
             <!-- box-animate -->
@@ -150,12 +202,12 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
             <div class="header__nav">
                 <div class="header__flex-nav">
                     <div class="header__nav-block-flex">
-                        <h1><a href="../">Home</a></h1>
-                        <h1><a href="choose_car_page.php">Choose Car</a></h1>
+                        <h1><a href="">Home</a></h1>
+                        <h1><a href="page/choose_car_page.php">Choose Car</a></h1>
                     </div>
                     <div class="header__nav-block-flex">
-                        <h1><a href="">Contacts</a></h1>
-                        <h1><a href="">About</a></h1>
+                        <h1 id="buttonContacts">Contacts</h1>
+                        <h1><a href="about.php">About</a></h1>
                     </div>
                 </div>
                 <div class="header__neon"></div>
@@ -450,15 +502,29 @@ while ($assokUser = mysqli_fetch_assoc($resultUserStart)) {
 
         });
         //authUser
-        const headerLineUserActive = document.getElementById('userAuth');
-        const headerLineUserInner = document.getElementById('userInner');
-        headerLineUserActive.addEventListener('click', () => {
-            if (headerLineUserActive.getAttribute("data-active") == 0) {
-                headerLineUserActive.dataset.active = 1;
-                headerLineUserInner.style.display = 'flex';
-            } else {
-                headerLineUserActive.dataset.active = 0;
-                headerLineUserInner.style.display = 'none';
+        if (document.getElementById('userAuth') != null && document.getElementById('userInner') != null) {
+            const headerLineUserActive = document.getElementById('userAuth');
+            const headerLineUserInner = document.getElementById('userInner');
+            headerLineUserActive.addEventListener('click', () => {
+                if (headerLineUserActive.getAttribute("data-active") == 0) {
+                    headerLineUserActive.dataset.active = 1;
+                    headerLineUserInner.style.display = 'flex';
+                } else {
+                    headerLineUserActive.dataset.active = 0;
+                    headerLineUserInner.style.display = 'none';
+                }
+            });
+        }
+        // script contacts 
+        const contactsContainer = document.getElementById('contactsContainer');
+        const buttonContacts = document.getElementById('buttonContacts');
+        buttonContacts.addEventListener('click', () => {
+            if (getComputedStyle(contactsContainer).display == 'none') {
+                contactsContainer.style.display = 'block';
+                const closeContactContainer = contactsContainer.querySelector('.block__close');
+                closeContactContainer.addEventListener('click', () => {
+                    contactsContainer.style.display = 'none';
+                });
             }
         });
         // add-img

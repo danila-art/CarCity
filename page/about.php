@@ -21,6 +21,58 @@
     <div class="mk-spinner-wrap">
         <div class="mk-spinner-ring"></div>
     </div>
+    <section class="contacts" id="contactsContainer">
+        <div class="contacts__box">
+            <!-- box-animate -->
+            <div class="block-animate__bar block-animate__top"></div>
+            <div class="block-animate__bar block-animate__right block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__bottom block-animate__delay"></div>
+            <div class="block-animate__bar block-animate__left"></div>
+            <div class="block__close">
+                <img src="../img/icons/cancel-white.png" alt="errorUpImage">
+            </div>
+            <div class="contacts__box-heading">
+                <h2>Контакты</h2>
+            </div>
+            <div class="contacts__box-text">
+                <h2>Адрес:</h2>
+                <h2>Ул. Савушкина дом. 34</h2>
+            </div>
+            <div class="contacts__box-text">
+                <h2>Номер телефона:</h2>
+                <h2>+7 937 654-32-32</h2>
+            </div>
+            <div class="contacts__box-text">
+                <h2>Электронная почта:</h2>
+                <h2>Car_City_30@mail.ru</h2>
+            </div>
+            <div class="contacts__box-admin-data">
+                <h2>Администратор</h2>
+            </div>
+            <div class="contacts__box-admin-img">
+                <img src="../img/admin_image.jpg" alt="errorUpImage">
+            </div>
+            <div class="contacts__box-admin-data">
+                <h2>ФИО</h2>
+                <h2>Сивов Данила Алексеевич</h2>
+            </div>
+            <div class="contacts__box-admin-data">
+                <h2>Электронная почта</h2>
+                <h2>danila.sivov.96@mail.ru</h2>
+            </div>
+            <div class="contacts__box-admin-social-flex">
+                <div class="contacts__box-admin-social-box">
+                    <img src="../img/social-media-app-icons-collection/twitter.png" alt="errorUpImage">
+                </div>
+                <div class="contacts__box-admin-social-box">
+                    <img src="../img/social-media-app-icons-collection/facebook.png" alt="errorUpImage">
+                </div>
+                <div class="contacts__box-admin-social-box">
+                    <img src="../img/social-media-app-icons-collection/instagram.png" alt="errorUpImage">
+                </div>
+            </div>
+        </div>
+    </section>
     <section class="block-autorization-and-registration" id="moduleBlockRegAuto">
         <div class="block-registration" id="blockRegistration">
             <!-- box-animate -->
@@ -124,11 +176,11 @@
                 <div class="header__flex-nav">
                     <div class="header__nav-block-flex">
                         <h1><a href="../">Home</a></h1>
-                        <h1><a href="">Choose Car</a></h1>
+                        <h1><a href="choose_car_page.php">Choose Car</a></h1>
                     </div>
                     <div class="header__nav-block-flex">
-                        <h1><a href="">Contacts</a></h1>
-                        <h1><a href="">About</a></h1>
+                        <h1 id="buttonContacts">Contacts</h1>
+                        <h1><a href="about.php">About</a></h1>
                     </div>
                 </div>
                 <div class="header__neon"></div>
@@ -159,9 +211,6 @@
             <div class="header__content-heading">
                 <h2>Здесь вы можете больше узнать о компании</h2>
             </div>
-            <div class="header__content-img">
-                <img src="../img/about//cheerful-call-center-operators-during-working-process_74855-4003.jpg" alt="errorUpImage">
-            </div>
             <div class="header__text-content">
                 <h3>Главная задача компании CarCity – сделать такую услугу, как аренда элитных автомобилей доступной на
                     территории
@@ -175,7 +224,30 @@
         <div class="about-main__heading">
             <h2>О компании</h2>
         </div>
-            
+        <div class="about-main__flex-container">
+            <div class="about-main__box-img">
+                <img src="../img/about/cheerful-call-center-operators-during-working-process_74855-4003.jpg" alt="errorUpImage">
+            </div>
+            <div class="about-main__text">
+                <h2>На сегодняшний день почти у каждой компании занимающейся арендой автомобилей есть свой сайт, приложение или иная платформа подачи информации и предоставление услуг по арендованию транспортных средств.</h2>
+            </div>
+        </div>
+        <div class="about-main__flex-container">
+            <div class="about-main__text">
+                <h2>Сайт аренды элитных автомобилей CarCity, предназначенный для людей любого возраста. Для предоставление возможности арендовать дорогой автомобиль, который не каждый может себе позволить и получить новые ощущения. </h2>
+            </div>
+            <div class="about-main__box-img">
+                <img src="../img/about/i.jpg" alt="errorUpImage">
+            </div>
+        </div>
+        <div class="about-main__flex-container">
+            <div class="about-main__box-img">
+                <img src="../img/about/FFF_009.jpg" alt="errorUpImage">
+            </div>
+            <div class="about-main__text">
+                <h2>Сайт компании служит для возможности как аренды транспортного средств, а также и предоставление информации автомобиля. На сайте информация находится в свободном доступе, как полная информация о компании, так и о автомобилях. Только авторизированные пользователи могут бронировать транспортное средство. </h2>
+            </div>
+        </div>
     </section>
     <!-- js script  -->
     <script>
@@ -211,15 +283,29 @@
 
         });
         //authUser
-        const headerLineUserActive = document.getElementById('userAuth');
-        const headerLineUserInner = document.getElementById('userInner');
-        headerLineUserActive.addEventListener('click', () => {
-            if (headerLineUserActive.getAttribute("data-active") == 0) {
-                headerLineUserActive.dataset.active = 1;
-                headerLineUserInner.style.display = 'flex';
-            } else {
-                headerLineUserActive.dataset.active = 0;
-                headerLineUserInner.style.display = 'none';
+        if (document.getElementById('userAuth') != null && document.getElementById('userInner') != null) {
+            const headerLineUserActive = document.getElementById('userAuth');
+            const headerLineUserInner = document.getElementById('userInner');
+            headerLineUserActive.addEventListener('click', () => {
+                if (headerLineUserActive.getAttribute("data-active") == 0) {
+                    headerLineUserActive.dataset.active = 1;
+                    headerLineUserInner.style.display = 'flex';
+                } else {
+                    headerLineUserActive.dataset.active = 0;
+                    headerLineUserInner.style.display = 'none';
+                }
+            });
+        }
+        // script contacts 
+        const contactsContainer = document.getElementById('contactsContainer');
+        const buttonContacts = document.getElementById('buttonContacts');
+        buttonContacts.addEventListener('click', () => {
+            if (getComputedStyle(contactsContainer).display == 'none') {
+                contactsContainer.style.display = 'block';
+                const closeContactContainer = contactsContainer.querySelector('.block__close');
+                closeContactContainer.addEventListener('click', () => {
+                    contactsContainer.style.display = 'none';
+                });
             }
         });
     </script>

@@ -1,5 +1,6 @@
 .header {
     background-color: rgba(0, 0, 0, 0.7);
+    height: 70vh;
 }
 
 .header__content-heading {
@@ -51,4 +52,34 @@
     text-align: center;
     padding-top: 1%;
     padding-bottom: 1%;
+}
+
+.about-main__flex-container {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 90%;
+    margin: 0 auto;
+    padding-top: 5%;
+    padding-bottom: 5%;
+    align-items: center;
+}
+
+.about-main__box-img {
+    display: block;
+    width: 50%;
+    height: auto;
+}
+
+.about-main__box-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.about-main__text {
+    display: block;
+    width: 35%;
+    height: auto;
+    text-align: center;
 }

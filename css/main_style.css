@@ -179,7 +179,7 @@ input {
     background-blend-mode: multiply;
     background-color: rgba(0, 0, 0, 0.4);
     width: 100%;
-    height: auto;
+    height: 115vh;
 }
 
 .header__line {
@@ -208,6 +208,10 @@ input {
     position: relative;
     width: 100%;
     height: 20vh;
+}
+
+.header__nav h1 {
+    cursor: pointer;
 }
 
 .header__neon {
@@ -264,8 +268,10 @@ input {
     display: block;
     position: absolute;
     top: 60%;
+    width: 10%;
     text-align: center;
-    left: 47%;
+    left: 45%;
+    right: 45%;
     cursor: pointer;
 }
 
@@ -1094,4 +1100,87 @@ input {
 
 .block-inner-1 h3, .block-inner-2 h3, .block-inner-3 h3 {
     margin: auto;
+}
+
+.contacts {
+    display: none;
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.6);
+    width: 100%;
+    height: 100vh;
+    overflow-y: scroll;
+    z-index: 3100;
+}
+
+.contacts__box {
+    display: block;
+    position: relative;
+    background-image: url('../img/background/black-smooth-textured-paper-background.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    width: 50%;
+    height: auto;
+    margin: 2% auto;
+    z-index: 1100;
+    overflow: hidden;
+    animation: widthBlockOpen .5s ease-in-out;
+    animation-iteration-count: 1;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.contacts__box-heading {
+    text-align: center;
+    padding-top: 1%;
+    padding-bottom: 1%;
+}
+
+.contacts__box-text {
+    width: 90%;
+    margin: 0 auto;
+}
+
+.contacts__box-text h2:nth-child(2) {
+    padding-left: 5%;
+}
+
+.contacts__box-admin-img {
+    display: block;
+    width: 60%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contacts__box-admin-img img {
+    width: 100%;
+    height: auto;
+    border-radius: 40px;
+}
+
+.contacts__box-admin-data {
+    display: block;
+    text-align: center;
+    padding-top: 2%;
+    padding-bottom: 2%;
+}
+
+.contacts__box-admin-social-flex {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.contacts__box-admin-social-box {
+    display: block;
+    width: 20%;
+    height: auto;
+}
+
+.contacts__box-admin-social-box img {
+    width: 100%;
+    height: auto;
 }
